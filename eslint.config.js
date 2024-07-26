@@ -18,7 +18,7 @@ export default defineFlatConfig([
       "src/assets/**",
       "src/**/iconfont/**",
       "/js",
-      "/chat"
+      "/chat-elements"
     ]
   },
   {
