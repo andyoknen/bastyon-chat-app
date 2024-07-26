@@ -1,11 +1,11 @@
 import type { App } from "vue";
 
 import { setupAssets } from "./assets";
-import { setupMatrixChat } from "./matrix-chat";
+import { setupChatScripts } from "./chat-scripts";
 import { setupRouter } from "./router";
 
 export const setupProviders = async (app: App) => {
   setupAssets();
-  await setupMatrixChat();
+  await setupChatScripts();
   await setupRouter(app);
 };
