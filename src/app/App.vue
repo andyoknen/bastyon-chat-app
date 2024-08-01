@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import { Chat } from "@/entities/chat";
+import { AppPages, AppRoutes, EAppProviders } from "./providers";
+
+provide(EAppProviders.AppRoutes, AppRoutes);
+provide(EAppProviders.AppPages, AppPages);
 </script>
 
 <template>
-  <Chat />
+  <router-view />
 </template>
 
 <style></style>

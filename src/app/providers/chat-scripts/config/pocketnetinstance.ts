@@ -1,4 +1,7 @@
 export const PocketnetInstance = {
+  menuOpen: () => {
+    console.log("menu is opened");
+  },
   mobile: {
     supportimagegallery: () => null
   },
@@ -39,6 +42,7 @@ export const PocketnetInstance = {
     ],
     localStoragePrefix: "bastyon",
     matrix: "matrix.pocketnet.app",
+
     name: "PCRB",
     nav: {
       navPrefix: "/"

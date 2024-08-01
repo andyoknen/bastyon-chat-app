@@ -1,6 +1,5 @@
-@import "emoji-mart.css";
-@import "normalize.css";
 @import "vendors";
+@import "emoji-mart.css";
 
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
 
@@ -102,9 +101,6 @@
   --color-yellow: 255, 238, 0;
 }
 
-* {
-  background: red;
-}
 :root[theme="black"] {
   --background-hidden-layer: 10, 12, 23;
   --background-total-theme: 18, 22, 33;
