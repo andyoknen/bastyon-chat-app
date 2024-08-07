@@ -4,7 +4,7 @@ import { LoginForm } from "@/features/auth";
 
 <template>
   <div
-    class="mx-auto flex w-full flex-col justify-center space-y-6 max-w-[350px]"
+    class="mx-auto flex w-full max-w-[350px] flex-col justify-center space-y-6"
   >
     <div class="flex flex-col space-y-2 text-center">
       <h1 class="text-2xl font-semibold tracking-tight">

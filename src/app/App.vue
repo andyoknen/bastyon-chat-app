@@ -6,7 +6,9 @@ provide(EAppProviders.AppPages, AppPages);
 </script>
 
 <template>
-  <router-view />
+  <div class="relative min-h-screen bg-background-total-theme">
+    <router-view />
+  </div>
 </template>
 
 <style></style>

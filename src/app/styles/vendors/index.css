@@ -1,2 +1,6 @@
 @import "tailwind.css";
 @import "matrix.css";
+
+:root {
+  --tw-bg-opacity: 1;
+}
