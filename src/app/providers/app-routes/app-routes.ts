@@ -16,6 +16,14 @@ export class AppRoutes {
     return getRoute(AppPages.login, {});
   }
 
+  static getProfile() {
+    return getRoute(AppPages.profile, {});
+  }
+
+  static getProfileEdit() {
+    return getRoute(AppPages.profileEdit, {});
+  }
+
   static getWelcome() {
     return getRoute(AppPages.welcome, {});
   }

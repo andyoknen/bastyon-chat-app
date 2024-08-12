@@ -31,6 +31,7 @@ export default {
         "color-txt-gray-dark": "rgb(var(--color-txt-gray-dark))",
         "color-txt-orange": "rgb(var(--color-txt-orange))",
         "color-yellow": "rgb(var(--color-yellow))",
+        "neutral-grad-0": "rgb(var(--neutral-grad-0))",
         "neutral-grad-2": "rgb(var(--neutral-grad-2))",
         "neutral-grad-3": "rgb(var(--neutral-grad-3))",
         "text-color": "rgb(var(--text-color))",

@@ -32,14 +32,9 @@ onUnmounted(closeDrawer);
 </script>
 
 <template>
-  <teleport to="body">
+  <DialogTeleport>
     <transition @after-leave="onAfterLeaveTransition" name="fade">
-      <div
-        @click="closeDrawer"
-        class="fixed inset-0 z-40 cursor-default bg-background-overlay"
-        role="button"
-        v-show="canShowOverlay"
-      >
+      <DialogOverlay @click="closeDrawer" v-show="canShowOverlay">
         <transition @after-leave="onAfterLeaveTransition" name="slide-in">
           <div
             @click.stop
@@ -48,27 +43,22 @@ onUnmounted(closeDrawer);
           >
             <div class="flex gap-3 p-2">
               <Logo variant="only-icon" />
-              <button
-                @click="closeDrawer"
-                class="ml-auto text-color-txt-ac transition hover:text-neutral-grad-3"
-              >
-                <IconX />
-              </button>
+              <DialogClose @close="closeDrawer" class="ml-auto" />
             </div>
             <div class="p-2">
               <slot name="content" />
             </div>
           </div>
         </transition>
-      </div>
+      </DialogOverlay>
     </transition>
-  </teleport>
+  </DialogTeleport>
 </template>
 
-<style>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.25s;
+  transition: opacity 0.15s;
 }
 .fade-enter-from,
 .fade-leave-to {
@@ -77,7 +67,7 @@ onUnmounted(closeDrawer);
 
 .slide-in-enter-active,
 .slide-in-leave-active {
-  transition: transform 0.25s ease-in;
+  transition: transform 0.15s ease-in;
 }
 
 .slide-in-enter-from,
