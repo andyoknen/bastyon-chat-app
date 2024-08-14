@@ -1,34 +1,23 @@
 <script setup lang="ts">
 import { useAppRoutes } from "@/app/providers";
-import { IconEdit, IconUser } from "@/shared/ui/icons";
-import { ChatMenuButton, DRAWER_CHAT_MENU_ID } from "@/widgets/chat-menu";
+import { DRAWER_CHAT_MENU_ID } from "@/widgets/chat-menu";
+
+import ThemeSwitcher from "./ThemeSwitcher.vue";
 
 const routes = useAppRoutes();
-
-const MENU_ITEMS = [
-  {
-    icon: IconUser,
-    label: "Мой профиль",
-    to: routes.getProfile()
-  },
-  {
-    icon: IconEdit,
-    label: "Изменить профиль",
-    to: routes.getProfileEdit()
-  }
-];
 </script>
 
 <template>
   <Drawer :id="DRAWER_CHAT_MENU_ID">
     <template #content>
-      <ChatMenuButton
-        :icon="menuItem.icon"
-        :key="menuItem.label"
-        :label="menuItem.label"
-        :to="menuItem.to"
-        v-for="menuItem of MENU_ITEMS"
-      />
+      <RouterLink
+        :to="routes.getProfile()"
+        class="flex items-center gap-4 border-b p-4"
+      >
+        <Avatar size="lg" src="" username="s" />
+        <p class="text-sm font-semibold">SSSS</p>
+      </RouterLink>
+      <ThemeSwitcher />
     </template>
   </Drawer>
 </template>

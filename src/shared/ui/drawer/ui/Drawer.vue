@@ -38,16 +38,10 @@ onUnmounted(closeDrawer);
         <transition @after-leave="onAfterLeaveTransition" name="slide-in">
           <div
             @click.stop
-            class="h-screen w-[320px] bg-background-total-theme p-2"
+            class="h-screen w-[320px] bg-background-total-theme"
             v-show="isDisplayCurrentDrawer"
           >
-            <div class="flex gap-3 p-2">
-              <Logo variant="only-icon" />
-              <DialogClose @close="closeDrawer" class="ml-auto" />
-            </div>
-            <div class="p-2">
-              <slot name="content" />
-            </div>
+            <slot name="content" />
           </div>
         </transition>
       </DialogOverlay>

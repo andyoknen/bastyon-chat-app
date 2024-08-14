@@ -4,6 +4,7 @@ import { cva } from "class-variance-authority";
 const avatarVariants = cva("rounded-full  ", {
   variants: {
     size: {
+      lg: "max-h-16 max-w-16 min-w-16 min-h-16 text-3xl",
       md: "max-h-12 max-w-12 min-w-12 min-h-12 text-2xl",
       xl: "max-h-32 max-w-32 min-w-32 min-h-32 text-7xl"
     },
