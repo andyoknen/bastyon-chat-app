@@ -68,6 +68,7 @@ export default defineFlatConfig([
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-extraneous-class": "off",
       "@typescript-eslint/no-import-type-side-effects": "error",
       "@typescript-eslint/no-non-null-assertion": "off",
       "@typescript-eslint/no-redeclare": "error",
@@ -132,6 +133,7 @@ export default defineFlatConfig([
       ...pluginVue.configs["vue3-recommended"].rules,
       "no-undef": "off",
       "no-unused-vars": "off",
+      "vue/attributes-order": "off",
       "vue/html-self-closing": [
         "error",
         {

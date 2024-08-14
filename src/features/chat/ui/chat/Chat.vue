@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import { DEFAULT_ADDRESS, DEFAULT_PRIVATEKEY } from "@/shared/config";
+import { useAuthStore } from "@/entities/auth";
+
+const authStore = useAuthStore();
 </script>
 
 <template>
   <matrix-element
-    :address.attr="DEFAULT_ADDRESS"
+    :address.attr="authStore.address"
     :device.attr="''"
     :iscallsenabled.attr="true"
     :localization.attr="'en'"
     :mobile.attr="true"
     :pocketnet.attr="''"
-    :privatekey.attr="DEFAULT_PRIVATEKEY"
+    :privatekey.attr="authStore.privateKey"
     :recording.attr="true"
     :viewtype.attr="'split'"
   />
