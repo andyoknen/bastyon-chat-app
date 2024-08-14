@@ -5,11 +5,13 @@ import { createPinia } from "pinia";
 import { setupAssets } from "./assets";
 import { setupChatScripts } from "./chat-scripts";
 import { setupRouter } from "./router";
+import { setupInitialTheme } from "./theme";
 
 export const setupProviders = async (app: App) => {
   setupAssets();
   await setupChatScripts();
   app.use(createPinia());
+  setupInitialTheme();
   await setupRouter(app);
 };
 

@@ -6,7 +6,7 @@ provide(EAppProviders.AppPages, AppPages);
 </script>
 
 <template>
-  <div class="relative min-h-screen bg-background-total-theme">
+  <div class="relative min-h-screen bg-background-total-theme text-text-color">
     <transition mode="out-in" name="fade">
       <router-view />
     </transition>

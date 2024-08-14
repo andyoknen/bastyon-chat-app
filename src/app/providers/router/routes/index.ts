@@ -14,6 +14,6 @@ export const routes: RouteRecordRaw[] = [
   profileEdit,
   {
     path: "/:pathMatch(.*)*",
-    redirect: "/login"
+    redirect: "/welcome"
   }
 ];

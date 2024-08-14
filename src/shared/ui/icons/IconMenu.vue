@@ -10,21 +10,21 @@
   >
     <path
       d="M4 12H20"
-      stroke="black"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2"
     />
     <path
       d="M4 6H20"
-      stroke="black"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2"
     />
     <path
       d="M4 18H20"
-      stroke="black"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2"

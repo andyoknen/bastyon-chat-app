@@ -23,6 +23,6 @@ const logoVariants: Record<Props["variant"], Component> = {
   <component
     :class="props.class"
     :is="logoVariants?.[props.variant]"
-    class="h-6"
+    class="h-6 fill-text-color"
   />
 </template>
