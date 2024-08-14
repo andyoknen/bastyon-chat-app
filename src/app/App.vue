@@ -7,8 +7,19 @@ provide(EAppProviders.AppPages, AppPages);
 
 <template>
   <div class="relative min-h-screen bg-background-total-theme">
-    <router-view />
+    <transition mode="out-in" name="fade">
+      <router-view />
+    </transition>
   </div>
 </template>
 
-<style></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

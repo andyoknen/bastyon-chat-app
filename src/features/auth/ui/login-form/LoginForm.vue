@@ -2,7 +2,7 @@
 import { useAppRoutes } from "@/app/providers";
 import { useAuthStore } from "@/entities/auth";
 
-import { PrivateKeyInput } from "../private-key-input";
+import PrivateKeyInput from "./PrivateKeyInput.vue";
 
 const authStore = useAuthStore();
 const cryptoCredential = ref("");
@@ -19,12 +19,10 @@ const onSubmit = async () => {
 
 <template>
   <div class="grid gap-6">
-    <form>
-      <div class="grid gap-2">
-        <PrivateKeyInput v-model="cryptoCredential" />
-        <Button @click.prevent="onSubmit">Войти</Button>
-      </div>
-    </form>
+    <div class="grid gap-2">
+      <PrivateKeyInput autocomplete="username" v-model="cryptoCredential" />
+      <Button @click.prevent="onSubmit">Войти</Button>
+    </div>
   </div>
 </template>
 
