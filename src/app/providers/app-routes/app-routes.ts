@@ -15,6 +15,10 @@ export class AppRoutes {
   static getLogin() {
     return getRoute(AppPages.login, {});
   }
+
+  static getWelcome() {
+    return getRoute(AppPages.welcome, {});
+  }
 }
 
 function getRoute<T extends object = {}>(name: string, params?: T): Route<T> {

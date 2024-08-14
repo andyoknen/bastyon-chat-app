@@ -10,7 +10,7 @@ export const createRouteAuthGuardHandler = (router: Router) => {
     if (to.matched.some(record => record.meta.requiresAuth)) {
       if (!authStore.isAuthenticated) {
         next({
-          path: pages.login,
+          path: pages.welcome,
           query: { redirect: to.fullPath }
         });
       } else {

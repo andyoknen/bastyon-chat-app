@@ -3,9 +3,9 @@ import { LoginWidget } from "@/widgets/login-widget";
 </script>
 
 <template>
-  <div class="relative flex min-h-screen flex-col bg-background">
+  <div class="flex flex-col">
     <Logo class="absolute left-5 top-5 h-6" />
-    <div class="h-screen flex justify-center items-center">
+    <div class="flex h-screen items-center justify-center px-5">
       <LoginWidget />
     </div>
   </div>

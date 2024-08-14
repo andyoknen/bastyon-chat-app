@@ -35,5 +35,9 @@ export const useAuthStore = defineStore(NAMESPACE, () => {
     return authData;
   };
 
-  return { address, isAuthenticated, login, privateKey };
+  const logout = () => {
+    setAuthData({ address: null, privateKey: null });
+  };
+
+  return { address, isAuthenticated, login, logout, privateKey };
 });

@@ -16,7 +16,7 @@ const chatScripts = [
   "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js",
   "https://cdn.jsdelivr.net/npm/linkifyjs@3.0.5/dist/linkify.min.js",
   "js/buildChat.js",
-  "/chat-elements/matrix-element.min.js"
+  "/chat-elements/matrix-element.js"
 ];
 
 export const loadChatScripts = async () => {

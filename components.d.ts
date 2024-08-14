@@ -8,10 +8,16 @@ export {};
 declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('./src/shared/ui/button/Button.vue')['default']
+    Drawer: typeof import('./src/shared/ui/drawer/ui/Drawer.vue')['default']
     IconEye: typeof import('./src/shared/ui/icons/IconEye.vue')['default']
     IconEyeOff: typeof import('./src/shared/ui/icons/IconEyeOff.vue')['default']
     IconLogo: typeof import('./src/shared/ui/icons/IconLogo.vue')['default']
+    IconLogoFull: typeof import('./src/shared/ui/icons/IconLogoFull.vue')['default']
+    IconLogoText: typeof import('./src/shared/ui/icons/IconLogoText.vue')['default']
+    IconLogout: typeof import('./src/shared/ui/icons/IconLogout.vue')['default']
     IconQR: typeof import('./src/shared/ui/icons/IconQR.vue')['default']
+    IconUser: typeof import('./src/shared/ui/icons/IconUser.vue')['default']
+    IconX: typeof import('./src/shared/ui/icons/IconX.vue')['default']
     Input: typeof import('./src/shared/ui/input/Input.vue')['default']
     Logo: typeof import('./src/shared/ui/logo/Logo.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

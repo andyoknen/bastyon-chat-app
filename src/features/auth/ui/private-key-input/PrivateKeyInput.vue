@@ -24,7 +24,7 @@ const canUseQr = computed(() => !modelValue.value);
     />
     <label for="private-key-input">
       <span
-        class="absolute end-0 inset-y-0 flex items-center justify-center px-2"
+        class="absolute inset-y-0 end-0 flex items-center justify-center px-2"
       >
         <IconQR class="size-6" v-if="canUseQr" />
         <button @click="togglePasswordVisibility" type="button" v-else>

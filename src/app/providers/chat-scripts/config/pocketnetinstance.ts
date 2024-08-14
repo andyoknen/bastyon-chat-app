@@ -1,6 +1,9 @@
+import { useDrawerStore } from "@/shared/ui/drawer";
+import { DRAWER_CHAT_MENU_ID } from "@/widgets/chat-menu";
+
 export const PocketnetInstance = {
   menuOpen: () => {
-    console.log("menu is opened");
+    useDrawerStore().setDrawerId(DRAWER_CHAT_MENU_ID);
   },
   mobile: {
     supportimagegallery: () => null
