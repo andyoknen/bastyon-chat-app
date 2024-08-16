@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useAppRoutes } from "@/app/providers";
-import { UserProfileInfo } from "@/features/user-profile";
+import { UserAvatar, UserProfileInfo } from "@/features/user-profile";
 
 const routes = useAppRoutes();
 </script>
@@ -11,7 +11,7 @@ const routes = useAppRoutes();
       <RouterLink :to="routes.getProfileEdit()">Изм.</RouterLink>
     </template>
     <template #content>
-      <Avatar size="xl" src="" username="D" />
+      <UserAvatar size="xl" />
       <UserProfileInfo />
     </template>
   </ProfileLayout>
