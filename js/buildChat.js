@@ -2,6 +2,7 @@ window.jQuery ||
 document.write(
     '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
 );
+_SEO = null;
 
 function buildChat(streamRoom) {
     const roomId = streamRoom || localStorage.getItem("streamRoom");

@@ -1,8 +1,15 @@
 <script setup lang="ts">
+import { useAppInitializer } from "@/app/providers/app-initializer/use-app-initializer";
+import { useAuthStore } from "@/entities/auth";
+
 import { AppPages, AppRoutes, EAppProviders } from "./providers";
 
 provide(EAppProviders.AppRoutes, AppRoutes);
 provide(EAppProviders.AppPages, AppPages);
+
+const authStore = useAuthStore();
+
+onMounted(authStore.fetchUserInfo);
 </script>
 
 <template>

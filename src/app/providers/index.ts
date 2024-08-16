@@ -16,5 +16,6 @@ export const setupProviders = async (app: App) => {
 };
 
 export * from "./app-routes";
+export * from "./initializers";
 export * from "./router";
 export * from "./types";
