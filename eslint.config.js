@@ -12,13 +12,13 @@ export default defineFlatConfig([
   {
     ignores: [
       "**/.*",
-      "dist/*",
+      "**/dist/*",
       "*.d.ts",
-      "public/*",
-      "src/assets/**",
-      "src/**/iconfont/**",
-      "/js",
-      "/chat-elements"
+      "**/public/*",
+      "**/src/assets/**",
+      "**/src/**/iconfont/**",
+      "**/js",
+      "**/chat-elements"
     ]
   },
   {
