@@ -1,0 +1,49 @@
+name: base.best
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/master'
+    
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Prepare
+        run: |
+          npm install -g pnpm
+          pnpm install
+          pnpm build        
+      - name: Prepare archive
+        run: tar czf dist.tgz ./dist
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: bastyon.tgz
+          path: dist.tgz
+
+  deploy:
+    needs: build
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      matrix:
+        runner: [ base.best ]
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist.tgz
+      - name: Unpack artifact
+        run: tar xzf dist.tgz -C /data/base/ --no-same-owner
+      - name: Delete artifacts
+        run: rm -rf dist.tgz
+      - name: Reset nginx cache
+        run: /data/reset_cache.sh
+        shell: bash
