@@ -21,7 +21,7 @@ jobs:
           pnpm install
           pnpm build        
       - name: Prepare archive
-        run: tar czf dist.tgz ./dist
+        run: tar czf dist.tgz -C ./dist .
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
@@ -41,7 +41,9 @@ jobs:
         with:
           name: dist.tgz
       - name: Unpack artifact
-        run: tar xzf dist.tgz -C /data/base/ --no-same-owner
+        run: |
+          rm -rf /data/base/*
+          tar xzf dist.tgz -C /data/base/ --no-same-owner
       - name: Delete artifacts
         run: rm -rf dist.tgz
       - name: Reset nginx cache
