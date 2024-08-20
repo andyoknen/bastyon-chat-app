@@ -16,9 +16,7 @@ export default defineFlatConfig([
       "*.d.ts",
       "**/public/*",
       "**/src/assets/**",
-      "**/src/**/iconfont/**",
-      "**/js",
-      "**/chat-elements"
+      "**/src/**/iconfont/**"
     ]
   },
   {
