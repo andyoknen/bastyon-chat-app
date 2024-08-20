@@ -11,4 +11,4 @@ async function setupApp() {
   return app;
 }
 
-export const app = await setupApp();
+export const app = setupApp();

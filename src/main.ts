@@ -1,3 +1,3 @@
 import { app } from "./app";
 
-app.mount("#app");
+app.then(app => app.mount("#app"));
