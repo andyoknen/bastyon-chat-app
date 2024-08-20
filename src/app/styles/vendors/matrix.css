@@ -1,36 +1,36 @@
 @import "https://use.fontawesome.com/releases/v5.2.0/css/all.css";
 html[chatbin] .matrix {
-    position: relative;
-    top: 10px;
-    float: right;
-    bottom: auto;
-    z-index: 999;
-    width: 340px;
+  position: relative;
+  top: 10px;
+  float: right;
+  bottom: auto;
+  z-index: 999;
+  width: 340px;
 }
 
 html[chatbin] .matrix .wrappermtrx {
-    position: fixed;
-    width: 340px;
-    right: 1em;
-    bottom: 1em;
-    border-radius: 3px;
-    border: 1px solid rgb(247, 247, 247);
+  position: fixed;
+  width: 340px;
+  right: 1em;
+  bottom: 1em;
+  border-radius: 3px;
+  border: 1px solid rgb(247, 247, 247);
 }
 
 #exported {
-    position: relative;
-    width: 300px;
-    height: 500px;
+  position: relative;
+  width: 300px;
+  height: 500px;
 }
 
 @media screen and (max-width: 768px) {
-    #exported {
-        position: fixed;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-    }
+  #exported {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

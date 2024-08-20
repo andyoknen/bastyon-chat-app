@@ -7,7 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+
 .eslintcache
+
+components.d.ts
+auto-imports.d.ts
 
 node_modules
 dist

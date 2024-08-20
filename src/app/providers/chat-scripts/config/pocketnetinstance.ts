@@ -1,4 +1,10 @@
+import { useDrawerStore } from "@/shared/ui/drawer";
+import { DRAWER_CHAT_MENU_ID } from "@/widgets/chat-menu";
+
 export const PocketnetInstance = {
+  menuOpen: () => {
+    useDrawerStore().setDrawerId(DRAWER_CHAT_MENU_ID);
+  },
   mobile: {
     supportimagegallery: () => null
   },
@@ -39,6 +45,7 @@ export const PocketnetInstance = {
     ],
     localStoragePrefix: "bastyon",
     matrix: "matrix.pocketnet.app",
+
     name: "PCRB",
     nav: {
       navPrefix: "/"
@@ -52,6 +59,11 @@ export const PocketnetInstance = {
   platform: {
     matrixchat: {
       link: () => null
+    }
+  },
+  user: {
+    address: {
+      value: ""
     }
   }
 };

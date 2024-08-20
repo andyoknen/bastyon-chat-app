@@ -1,1 +1,7 @@
+@import "tailwind.css";
 @import "matrix.css";
+@import "vue-advanced-cropper.css";
+
+:root {
+  --tw-bg-opacity: 1;
+}
