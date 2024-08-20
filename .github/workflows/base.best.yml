@@ -26,7 +26,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: bastyon.tgz
+          name: dist.tgz
           path: dist.tgz
 
   deploy:
