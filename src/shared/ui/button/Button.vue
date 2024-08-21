@@ -2,7 +2,7 @@
 import { cva } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-3xl text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center relative justify-center rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     defaultVariants: {
       size: "default",
@@ -30,6 +30,8 @@ const buttonVariants = cva(
 
 interface Props {
   as?: string;
+  disabled?: boolean;
+  loading?: boolean;
   size?: NonNullable<Parameters<typeof buttonVariants>[0]>["size"];
   variant?: NonNullable<Parameters<typeof buttonVariants>[0]>["variant"];
 }
@@ -41,10 +43,16 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <component
-    :class="[buttonVariants({ variant, size }), $attrs.class ?? '']"
+    :class="[
+      buttonVariants({ variant, size }),
+      loading && 'cursor-progress',
+      $attrs.class ?? ''
+    ]"
+    :disabled="disabled || loading"
     :is="as"
   >
-    <slot />
+    <slot v-if="!loading" />
+    <Spinner class="h-4 w-4" v-else />
   </component>
 </template>
 

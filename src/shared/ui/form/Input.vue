@@ -3,22 +3,23 @@ import { useField } from "vee-validate";
 import { HTMLAttributes } from "vue";
 
 interface Props {
-  class?: HTMLAttributes["class"];
+  class: HTMLAttributes["class"];
   label: string;
-  modelValue?: string;
+  modelValue: string;
   name: string;
   placeholder?: string;
-  type?: string;
+  type: string;
 }
 
-const props = defineProps<Partial<Props>>();
+const props = withDefaults(defineProps<Partial<Props>>(), {});
+
 const { errorMessage, value } = useField(() => props.name, undefined, {
   syncVModel: true
 });
 </script>
 
 <template>
-  <FieldWrapper :error-message="errorMessage" :label="label" :name="name">
+  <FieldWrapper :error-message="errorMessage" :label="label">
     <input
       :class="[
         errorMessage && 'border-color-bad',

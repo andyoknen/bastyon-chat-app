@@ -1,6 +1,7 @@
 import { createAppInitializer } from "@/app/providers";
 import { useLocalStorage } from "@/shared/lib/browser";
 import { convertToHexString } from "@/shared/lib/convert-to-hex-string";
+import { useAsyncOperation } from "@/shared/use";
 import { defineStore } from "pinia";
 
 import type { AuthData, UserInfo } from "./types";
@@ -36,17 +37,23 @@ export const useAuthStore = defineStore(NAMESPACE, () => {
     await appInitializer.initializeAndFetchUserData(address.value, setUserInfo);
   };
 
-  const login = async (cryptoCredential: string) => {
-    const keyPair = createKeyPair(cryptoCredential);
-    const address = getAddressFromPubKey(keyPair.publicKey);
-    const authData: AuthData = {
-      address,
-      privateKey: convertToHexString(keyPair.privateKey)
-    };
-    setAuthData(authData);
-    await fetchUserInfo();
-    return authData;
-  };
+  const { execute: login, isLoading: isLoggingIn } = useAsyncOperation(
+    async (cryptoCredential: string) => {
+      try {
+        const keyPair = createKeyPair(cryptoCredential);
+        const address = getAddressFromPubKey(keyPair.publicKey);
+        const authData: AuthData = {
+          address,
+          privateKey: convertToHexString(keyPair.privateKey)
+        };
+        setAuthData(authData);
+        await fetchUserInfo();
+        return { data: authData, error: null };
+      } catch (e) {
+        return { data: null, error: "Вы ввели неверный приватный ключ" };
+      }
+    }
+  );
 
   const logout = () => {
     setAuthData({ address: null, privateKey: null });
@@ -57,6 +64,7 @@ export const useAuthStore = defineStore(NAMESPACE, () => {
     address,
     fetchUserInfo,
     isAuthenticated,
+    isLoggingIn,
     login,
     logout,
     privateKey,

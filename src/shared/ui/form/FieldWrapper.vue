@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Props {
   errorMessage: string;
-  label: string;
+  label?: string;
 }
 
 withDefaults(defineProps<Props>(), {});

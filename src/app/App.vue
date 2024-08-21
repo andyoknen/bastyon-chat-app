@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useAppInitializer } from "@/app/providers/app-initializer/use-app-initializer";
 import { useAuthStore } from "@/entities/auth";
 
 import { AppPages, AppRoutes, EAppProviders } from "./providers";

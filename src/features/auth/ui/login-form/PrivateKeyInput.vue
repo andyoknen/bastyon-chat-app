@@ -1,5 +1,15 @@
 <script setup lang="ts">
-const modelValue = defineModel<string>("modelValue", { required: true });
+import { useField } from "vee-validate";
+
+interface Props {
+  name: string;
+}
+
+const props = defineProps<Props>();
+
+const { value } = useField<string>(() => props.name, undefined, {
+  initialValue: ""
+});
 
 const isPasswordVisible = ref(false);
 
@@ -10,21 +20,22 @@ const togglePasswordVisibility = () => {
 const inputType = computed(() => {
   return isPasswordVisible.value ? "text" : "password";
 });
-const canUseQr = computed(() => !modelValue.value);
+
+const canUseQr = computed(() => !value.value);
 </script>
 
 <template>
   <div class="relative w-full max-w-sm items-center">
     <Input
+      :name="name"
       :type="inputType"
       class="pr-10"
       id="private-key-input"
       placeholder="Ваш приватный ключ для входа"
-      v-model="modelValue"
     />
     <label for="private-key-input">
       <span
-        class="absolute inset-y-0 end-0 flex items-center justify-center px-2"
+        class="absolute inset-y-0 end-0 flex h-10 items-center justify-center px-2"
       >
         <IconQR class="size-6" v-if="canUseQr" />
         <button @click="togglePasswordVisibility" type="button" v-else>
