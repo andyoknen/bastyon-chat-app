@@ -31,3 +31,5 @@ dist-ssr
 .vscode
 *.sln
 *.sw?
+
+/public/js/**/*.min.js

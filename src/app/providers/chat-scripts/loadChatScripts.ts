@@ -1,35 +1,52 @@
+import { IS_DEV } from "@/shared/config";
 import { loadScript } from "@/shared/lib/loadScript";
-const chatScripts = [
-  "js/lib/pocketnet/buffer.js",
-  "js/lib/pocketnet/btc17.js",
-  "js/media.js",
-  "js/lib/client/api.js",
-  "js/lib/client/system16.js",
-  "js/lib/client/sdk.js",
-  "js/functionsfirst.js",
-  "js/vendor/unmute.js",
-  "js/lib/bastyonCalls/bastyonCalls.min.js",
-  "https://pocketnet.app/js/widgets.js",
-  "https://momentjs.com/downloads/moment.js",
-  "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js",
-  "https://cdn.jsdelivr.net/npm/linkifyjs@3.0.5/dist/linkify.min.js",
-  "https://bastyon.com/js/lib/client/actions.js",
-  "https://bastyon.com/js/functionsfirst.js",
-  "https://bastyon.com/js/kit.js",
-  "https://bastyon.com/js/lib/client/api.js",
-  "https://bastyon.com/js/lib/client/resoursesdbls.js",
-  "https://bastyon.com/js/lib/client/resoursesdb.js",
-  "js/buildChat.js",
-  "js/vendor/joypixels.js",
-  "js/vendor/xss.min.js",
-  "js/vendor/hammer.min.js",
-  "/chat-elements/matrix-element.js"
-];
 
-export const loadChatScripts = async () => {
+const scriptsToLoad = {
+  async: [
+    "https://cdn.jsdelivr.net/npm/moment-mini@2.29.4/moment.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.7/underscore-min.js",
+    "https://cdn.jsdelivr.net/npm/linkifyjs@3.0.5/dist/linkify.min.js",
+    "/js/widgets",
+    "/js/buildChat",
+    "/chat-elements/matrix-element",
+    "/js/media",
+    "/js/lib/bastyonCalls/bastyonCalls.min.js",
+    "/js/vendor/unmute",
+    "/js/vendor/joypixels",
+    "/js/vendor/hammer.min.js",
+    "/js/vendor/xss.min.js"
+  ],
+  await: [
+    "/js/functionsfirst",
+    "/js/functions",
+    "/js/lib/pocketnet/btc17",
+    "/js/lib/pocketnet/buffer",
+    "/js/lib/client/system16",
+    "/js/lib/client/sdk",
+    "/js/lib/client/actions",
+    "/js/kit",
+    "/js/lib/client/api",
+    "/js/lib/client/resoursesdbls",
+    "/js/lib/client/resoursesdb"
+  ]
+};
+
+export const loadChatScripts = async (): Promise<void> => {
   try {
-    for (let script of chatScripts) {
-      await loadScript(script);
+    const normalizeScriptName = (scriptName: string): string => {
+      if (scriptName.endsWith(".js")) {
+        return scriptName;
+      }
+      const suffix = IS_DEV ? "" : ".min";
+      return `${scriptName}${suffix}.js`;
+    };
+
+    for (let script of scriptsToLoad.async) {
+      loadScript(normalizeScriptName(script));
+    }
+
+    for (let script of scriptsToLoad.await) {
+      await loadScript(normalizeScriptName(script));
     }
   } catch (error) {
     console.error("Failed to load matrix scripts", error);

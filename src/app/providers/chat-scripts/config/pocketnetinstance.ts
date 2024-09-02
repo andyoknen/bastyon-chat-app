@@ -1,7 +1,12 @@
+import { createKeyPair } from "@/entities/auth/model/key-pair";
 import { useDrawerStore } from "@/shared/ui/drawer";
 import { DRAWER_CHAT_MENU_ID } from "@/widgets/chat-menu";
 
 export const PocketnetInstance = {
+  apiHandlers: {
+    error: () => null,
+    success: () => null
+  },
   menuOpen: () => {
     useDrawerStore().setDrawerId(DRAWER_CHAT_MENU_ID);
   },
@@ -59,11 +64,60 @@ export const PocketnetInstance = {
   platform: {
     matrixchat: {
       link: () => null
-    }
+    },
+    sdk: {
+      syncStorage: {
+        eventListeners: {},
+        init() {
+          window.storage_tab = Date.now();
+          window.addEventListener("storage", e => {
+            if (!e.oldValue) {
+              this.eventListeners[e.key]?.create?.(e);
+              return;
+            }
+
+            if (!e.newValue) {
+              this.eventListeners[e.key]?.delete?.(e);
+              return;
+            }
+
+            this.eventListeners[e.key]?.change?.(e);
+          });
+        },
+        off(eventType, lStorageProp) {
+          if (this.eventListeners[lStorageProp]) {
+            delete this.eventListeners[lStorageProp][eventType];
+
+            if (Object.keys(this.eventListeners[lStorageProp]).length === 0) {
+              delete this.eventListeners[lStorageProp];
+            }
+          }
+        },
+        on(eventType, lStorageProp, callback) {
+          if (typeof this.eventListeners[lStorageProp] !== "object") {
+            this.eventListeners[lStorageProp] = {};
+          }
+
+          this.eventListeners[lStorageProp][eventType] = callback;
+        }
+      }
+    },
+    timeDifference: 0, // To be set via Configurator class methods
+    whiteList: [
+      "PEj7QNjKdDPqE9kMDRboKoCtp8V6vZeZPd",
+      "PJ3nv2jGyW2onqZVDKJf9TmfuLGpmkSK2X",
+      "TAqR1ncH95eq9XKSDRR18DtpXqktxh74UU",
+      "TFkhfcxXSWX5SsLcjhdiSDHEepWUcb7yi3"
+    ]
   },
   user: {
     address: {
-      value: ""
-    }
+      value: null // To be set via Configurator class methods
+    },
+    /**
+     * Obtains and inserts the keyPair value.
+     * @returns {Object} Returns the keyPair value that was obtained and inserted.
+     */
+    keys: null // To be set via Configurator class methods
   }
 };

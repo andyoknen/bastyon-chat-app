@@ -4,3 +4,5 @@ export const setupChatScripts = async () => {
   initializeChatConfig();
   await loadChatScripts();
 };
+
+export * from "./config";

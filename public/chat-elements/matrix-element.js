@@ -1030,7 +1030,7 @@ module.exports = String(test) === '[object z]';
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/simpleMenu/simpleMenu.vue?vue&type=template&id=f8ab8b44&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/simpleMenu/simpleMenu.vue?vue&type=template&id=f8ab8b44&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -5027,6 +5027,7 @@ var _WidgetEventCapability = __webpack_require__("2501");
 var _GetOpenIDAction = __webpack_require__("ac68");
 var _SimpleObservable = __webpack_require__("e008");
 var _Symbols = __webpack_require__("7a3a");
+var _UpdateDelayedEventAction = __webpack_require__("d68a");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -5051,7 +5052,7 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function _asyncIterator(iterable) { var method, async, sync, retry = 2; for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) { if (async && null != (method = iterable[async])) return method.call(iterable); if (sync && null != (method = iterable[sync])) return new AsyncFromSyncIterator(method.call(iterable)); async = "@@asyncIterator", sync = "@@iterator"; } throw new TypeError("Object is not async iterable"); }
 function AsyncFromSyncIterator(s) { function AsyncFromSyncIteratorContinuation(r) { if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object.")); var done = r.done; return Promise.resolve(r.value).then(function (value) { return { value: value, done: done }; }); } return AsyncFromSyncIterator = function AsyncFromSyncIterator(s) { this.s = s, this.n = s.next; }, AsyncFromSyncIterator.prototype = { s: null, n: null, next: function next() { return AsyncFromSyncIteratorContinuation(this.n.apply(this.s, arguments)); }, "return": function _return(value) { var ret = this.s["return"]; return void 0 === ret ? Promise.resolve({ value: value, done: !0 }) : AsyncFromSyncIteratorContinuation(ret.apply(this.s, arguments)); }, "throw": function _throw(value) { var thr = this.s["return"]; return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments)); } }, new AsyncFromSyncIterator(s); } /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * Copyright 2020 - 2021 The Matrix.org Foundation C.I.C.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * Copyright 2020 - 2024 The Matrix.org Foundation C.I.C.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              *
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              * Licensed under the Apache License, Version 2.0 (the "License");
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              * you may not use this file except in compliance with the License.
@@ -5505,9 +5506,16 @@ var ClientWidgetApi = /*#__PURE__*/function (_EventEmitter) {
           }
         });
       }
-      var isState = request.data.state_key !== null && request.data.state_key !== undefined;
+      var isDelayedEvent = request.data.delay !== undefined || request.data.parent_delay_id !== undefined;
+      if (isDelayedEvent && !this.hasCapability(_Capabilities.MatrixCapabilities.MSC4157SendDelayedEvent)) {
+        return this.transport.reply(request, {
+          error: {
+            message: "Missing capability"
+          }
+        });
+      }
       var sendEventPromise;
-      if (isState) {
+      if (request.data.state_key !== undefined) {
         if (!this.canSendStateEvent(request.data.type, request.data.state_key)) {
           return this.transport.reply(request, {
             error: {
@@ -5515,7 +5523,12 @@ var ClientWidgetApi = /*#__PURE__*/function (_EventEmitter) {
             }
           });
         }
-        sendEventPromise = this.driver.sendEvent(request.data.type, request.data.content || {}, request.data.state_key, request.data.room_id);
+        if (!isDelayedEvent) {
+          sendEventPromise = this.driver.sendEvent(request.data.type, request.data.content || {}, request.data.state_key, request.data.room_id);
+        } else {
+          var _request$data$delay, _request$data$parent_;
+          sendEventPromise = this.driver.sendDelayedEvent((_request$data$delay = request.data.delay) !== null && _request$data$delay !== void 0 ? _request$data$delay : null, (_request$data$parent_ = request.data.parent_delay_id) !== null && _request$data$parent_ !== void 0 ? _request$data$parent_ : null, request.data.type, request.data.content || {}, request.data.state_key, request.data.room_id);
+        }
       } else {
         var content = request.data.content || {};
         var msgtype = content['msgtype'];
@@ -5526,15 +5539,25 @@ var ClientWidgetApi = /*#__PURE__*/function (_EventEmitter) {
             }
           });
         }
-        sendEventPromise = this.driver.sendEvent(request.data.type, content, null,
-        // not sending a state event
-        request.data.room_id);
+        if (!isDelayedEvent) {
+          sendEventPromise = this.driver.sendEvent(request.data.type, content, null,
+          // not sending a state event
+          request.data.room_id);
+        } else {
+          var _request$data$delay2, _request$data$parent_2;
+          sendEventPromise = this.driver.sendDelayedEvent((_request$data$delay2 = request.data.delay) !== null && _request$data$delay2 !== void 0 ? _request$data$delay2 : null, (_request$data$parent_2 = request.data.parent_delay_id) !== null && _request$data$parent_2 !== void 0 ? _request$data$parent_2 : null, request.data.type, content, null,
+          // not sending a state event
+          request.data.room_id);
+        }
       }
       sendEventPromise.then(function (sentEvent) {
-        return _this9.transport.reply(request, {
-          room_id: sentEvent.roomId,
+        return _this9.transport.reply(request, _objectSpread({
+          room_id: sentEvent.roomId
+        }, "eventId" in sentEvent ? {
           event_id: sentEvent.eventId
-        });
+        } : {
+          delay_id: sentEvent.delayId
+        }));
       })["catch"](function (e) {
         console.error("error sending event: ", e);
         return _this9.transport.reply(request, {
@@ -5543,6 +5566,47 @@ var ClientWidgetApi = /*#__PURE__*/function (_EventEmitter) {
           }
         });
       });
+    }
+  }, {
+    key: "handleUpdateDelayedEvent",
+    value: function handleUpdateDelayedEvent(request) {
+      var _this10 = this;
+      if (!request.data.delay_id) {
+        return this.transport.reply(request, {
+          error: {
+            message: "Invalid request - missing delay_id"
+          }
+        });
+      }
+      if (!this.hasCapability(_Capabilities.MatrixCapabilities.MSC4157UpdateDelayedEvent)) {
+        return this.transport.reply(request, {
+          error: {
+            message: "Missing capability"
+          }
+        });
+      }
+      switch (request.data.action) {
+        case _UpdateDelayedEventAction.UpdateDelayedEventAction.Cancel:
+        case _UpdateDelayedEventAction.UpdateDelayedEventAction.Restart:
+        case _UpdateDelayedEventAction.UpdateDelayedEventAction.Send:
+          this.driver.updateDelayedEvent(request.data.delay_id, request.data.action).then(function () {
+            return _this10.transport.reply(request, {});
+          })["catch"](function (e) {
+            console.error("error updating delayed event: ", e);
+            return _this10.transport.reply(request, {
+              error: {
+                message: "Error updating delayed event"
+              }
+            });
+          });
+          break;
+        default:
+          return this.transport.reply(request, {
+            error: {
+              message: "Invalid request - unsupported action"
+            }
+          });
+      }
     }
   }, {
     key: "handleSendToDevice",
@@ -5845,7 +5909,7 @@ var ClientWidgetApi = /*#__PURE__*/function (_EventEmitter) {
     key: "handleReadRelations",
     value: function () {
       var _handleReadRelations = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(request) {
-        var _this10 = this;
+        var _this11 = this;
         var result, chunk;
         return _regeneratorRuntime().wrap(function _callee5$(_context5) {
           while (1) switch (_context5.prev = _context5.next) {
@@ -5888,9 +5952,9 @@ var ClientWidgetApi = /*#__PURE__*/function (_EventEmitter) {
               // only return events that the user has the permission to receive
               chunk = result.chunk.filter(function (e) {
                 if (e.state_key !== undefined) {
-                  return _this10.canReceiveStateEvent(e.type, e.state_key);
+                  return _this11.canReceiveStateEvent(e.type, e.state_key);
                 } else {
-                  return _this10.canReceiveRoomEvent(e.type, e.content['msgtype']);
+                  return _this11.canReceiveRoomEvent(e.type, e.content['msgtype']);
                 }
               });
               return _context5.abrupt("return", this.transport.reply(request, {
@@ -6126,6 +6190,8 @@ var ClientWidgetApi = /*#__PURE__*/function (_EventEmitter) {
             return this.handleGetMediaConfig(ev.detail);
           case _WidgetApiAction.WidgetApiFromWidgetAction.MSC4039UploadFileAction:
             return this.handleUploadFile(ev.detail);
+          case _WidgetApiAction.WidgetApiFromWidgetAction.MSC4157UpdateDelayedEvent:
+            return this.handleUpdateDelayedEvent(ev.detail);
           default:
             return this.transport.reply(ev.detail, {
               error: {
@@ -7579,7 +7645,6 @@ const DB_MIGRATIONS = [db => {
 }
 // Expand as needed.
 ];
-
 const VERSION = DB_MIGRATIONS.length;
 exports.VERSION = VERSION;
 function upgradeDatabase(db, oldVersion) {
@@ -8082,11 +8147,9 @@ limitations under the License.
 class ReEmitter {
   constructor(target) {
     this.target = target;
+    // Map from emitter to event name to re-emitter
     (0, _defineProperty2.default)(this, "reEmitters", new Map());
   }
-
-  // Map from emitter to event name to re-emitter
-
   reEmit(source, eventNames) {
     let reEmittersByEvent = this.reEmitters.get(source);
     if (!reEmittersByEvent) {
@@ -8358,7 +8421,7 @@ module.exports = Sha
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/topheader/index.vue?vue&type=template&id=b9eeb9ae&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/topheader/index.vue?vue&type=template&id=b9eeb9ae&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -9489,6 +9552,12 @@ class Relations extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "targetEvent", null);
     (0, _defineProperty2.default)(this, "creationEmitted", false);
     (0, _defineProperty2.default)(this, "client", void 0);
+    /**
+     * Listens for event status changes to remove cancelled events.
+     *
+     * @param event - The event whose status has changed
+     * @param status - The new status
+     */
     (0, _defineProperty2.default)(this, "onEventStatus", (event, status) => {
       if (!event.isSending()) {
         // Sending is done, so we don't need to listen anymore
@@ -9502,6 +9571,16 @@ class Relations extends _typedEventEmitter.TypedEventEmitter {
       event.removeListener(_event.MatrixEventEvent.Status, this.onEventStatus);
       this.removeEvent(event);
     });
+    /**
+     * For relations that have been redacted, we want to remove them from
+     * aggregation data sets and emit an update event.
+     *
+     * To do so, we listen for `Event.beforeRedaction`, which happens:
+     *   - after the server accepted the redaction and remote echoed back to us
+     *   - before the original event has been marked redacted in the client
+     *
+     * @param redactedEvent - The original relation event that is about to be redacted.
+     */
     (0, _defineProperty2.default)(this, "onBeforeRedaction", async redactedEvent => {
       if (!this.relations.has(redactedEvent)) {
         return;
@@ -9577,14 +9656,6 @@ class Relations extends _typedEventEmitter.TypedEventEmitter {
     }
     this.emit(RelationsEvent.Remove, event);
   }
-
-  /**
-   * Listens for event status changes to remove cancelled events.
-   *
-   * @param event - The event whose status has changed
-   * @param status - The new status
-   */
-
   /**
    * Get all relation events in this collection.
    *
@@ -9647,18 +9718,6 @@ class Relations extends _typedEventEmitter.TypedEventEmitter {
       eventsFromSender.delete(event);
     }
   }
-
-  /**
-   * For relations that have been redacted, we want to remove them from
-   * aggregation data sets and emit an update event.
-   *
-   * To do so, we listen for `Event.beforeRedaction`, which happens:
-   *   - after the server accepted the redaction and remote echoed back to us
-   *   - before the original event has been marked redacted in the client
-   *
-   * @param redactedEvent - The original relation event that is about to be redacted.
-   */
-
   /**
    * Get all events in this collection grouped by key and sorted by descending
    * event count in each group.
@@ -9819,57 +9878,6 @@ exports.UserEvent = UserEvent;
 })(UserEvent || (exports.UserEvent = UserEvent = {}));
 class User extends _typedEventEmitter.TypedEventEmitter {
   /**
-   * The 'displayname' of the user if known.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * The 'avatar_url' of the user if known.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * The presence status message if known.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * The presence enum if known.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * Timestamp (ms since the epoch) for when we last received presence data for this user.
-   * We can subtract lastActiveAgo from this to approximate an absolute value for when a user was last active.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * The time elapsed in ms since the user interacted proactively with the server,
-   * or we saw a message from the user
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * Whether we should consider lastActiveAgo to be an approximation
-   * and that the user should be seen as active 'now'
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * The events describing this user.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
    * Construct a new User. A User must have an ID and can optionally have extra information associated with it.
    * @param userId - Required. The ID of this user.
    */
@@ -9877,14 +9885,57 @@ class User extends _typedEventEmitter.TypedEventEmitter {
     super();
     this.userId = userId;
     (0, _defineProperty2.default)(this, "modified", -1);
+    /**
+     * The 'displayname' of the user if known.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "displayName", void 0);
     (0, _defineProperty2.default)(this, "rawDisplayName", void 0);
+    /**
+     * The 'avatar_url' of the user if known.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "avatarUrl", void 0);
+    /**
+     * The presence status message if known.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "presenceStatusMsg", void 0);
+    /**
+     * The presence enum if known.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "presence", "offline");
+    /**
+     * Timestamp (ms since the epoch) for when we last received presence data for this user.
+     * We can subtract lastActiveAgo from this to approximate an absolute value for when a user was last active.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "lastActiveAgo", 0);
+    /**
+     * The time elapsed in ms since the user interacted proactively with the server,
+     * or we saw a message from the user
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "lastPresenceTs", 0);
+    /**
+     * Whether we should consider lastActiveAgo to be an approximation
+     * and that the user should be seen as active 'now'
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "currentlyActive", false);
+    /**
+     * The events describing this user.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "events", {});
     this.displayName = userId;
     this.rawDisplayName = userId;
@@ -10784,19 +10835,21 @@ limitations under the License.
 */
 
 /**
+ * Common interface for all the request types returned by `OlmMachine.outgoingRequests`.
+ */
+
+/**
  * An implementation of {@link CryptoBackend} using the Rust matrix-sdk-crypto.
  */
 class RustCrypto {
-  /** whether {@link stop} has been called */
-
-  /** whether {@link outgoingRequestLoop} is currently running */
-
   constructor(olmMachine, http, _userId, _deviceId) {
     this.olmMachine = olmMachine;
     this.http = http;
     (0, _defineProperty2.default)(this, "globalBlacklistUnverifiedDevices", false);
     (0, _defineProperty2.default)(this, "globalErrorOnUnknownDevices", false);
+    /** whether {@link stop} has been called */
     (0, _defineProperty2.default)(this, "stopped", false);
+    /** whether {@link outgoingRequestLoop} is currently running */
     (0, _defineProperty2.default)(this, "outgoingRequestLoopRunning", false);
   }
   stop() {
@@ -11136,7 +11189,21 @@ var _utils = __webpack_require__("b83f");
 var _MSC3089Branch = __webpack_require__("da3f");
 var _megolm = __webpack_require__("4e99");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 /**
  * The recommended defaults for a tree space's power levels. Note that this
  * is UNSTABLE and subject to breaking changes without notice.
@@ -12692,7 +12759,21 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__("9523"));
 var _event = __webpack_require__("edaf");
 var _event2 = __webpack_require__("60af");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 function eventMapperFor(client, options) {
   let preventReEmit = Boolean(options.preventReEmit);
   const decrypt = options.decrypt !== false;
@@ -14765,6 +14846,8 @@ exports.ReceiptType = ReceiptType;
   ReceiptType["ReadPrivate"] = "m.read.private";
 })(ReceiptType || (exports.ReceiptType = ReceiptType = {}));
 const MAIN_ROOM_TIMELINE = "main";
+
+// We will only hold a synthetic receipt if we do not have a real receipt or the synthetic is newer.
 exports.MAIN_ROOM_TIMELINE = MAIN_ROOM_TIMELINE;
 //# sourceMappingURL=read_receipts.js.map
 
@@ -14966,7 +15049,21 @@ var _feature = __webpack_require__("082a");
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015 - 2023 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 // These constants are used as sane defaults when the homeserver doesn't support
 // the m.room_versions capability. In practice, KNOWN_SAFE_ROOM_VERSION should be
 // the same as the common default room version whereas SAFE_ROOM_VERSIONS are the
@@ -15018,84 +15115,6 @@ exports.RoomEvent = RoomEvent;
   RoomEvent["UnreadNotifications"] = "Room.UnreadNotifications";
 })(RoomEvent || (exports.RoomEvent = RoomEvent = {}));
 class Room extends _readReceipt.ReadReceipt {
-  // Pending in-flight requests { string: MatrixEvent }
-
-  // Useful to know at what point the current user has started using threads in this room
-
-  /**
-   * A record of the latest unthread receipts per user
-   * This is useful in determining whether a user has read a thread or not
-   */
-
-  // any filtered timeline sets we're maintaining for this room
-  // filter_id: timelineSet
-
-  // read by megolm via getter; boolean value - null indicates "use global value"
-
-  // flags to stop logspam about missing m.room.create events
-
-  // XXX: These should be read-only
-  /**
-   * The human-readable display name for this room.
-   */
-
-  /**
-   * The un-homoglyphed name for this room.
-   */
-
-  /**
-   * Dict of room tags; the keys are the tag name and the values
-   * are any metadata associated with the tag - e.g. `{ "fav" : { order: 1 } }`
-   */
-  // $tagName: { $metadata: $value }
-  /**
-   * accountData Dict of per-room account_data events; the keys are the
-   * event type and the values are the events.
-   */
-  // $eventType: $event
-  /**
-   * The room summary.
-   */
-
-  // legacy fields
-  /**
-   * The live event timeline for this room, with the oldest event at index 0.
-   * Present for backwards compatibility - prefer getLiveTimeline().getEvents()
-   */
-
-  /**
-   * oldState The state of the room at the time of the oldest
-   * event in the live timeline. Present for backwards compatibility -
-   * prefer getLiveTimeline().getState(EventTimeline.BACKWARDS).
-   */
-
-  /**
-   * currentState The state of the room at the time of the
-   * newest event in the timeline. Present for backwards compatibility -
-   * prefer getLiveTimeline().getState(EventTimeline.FORWARDS).
-   */
-
-  /**
-   * @experimental
-   */
-
-  /**
-   * A mapping of eventId to all visibility changes to apply
-   * to the event, by chronological order, as per
-   * https://github.com/matrix-org/matrix-doc/pull/3531
-   *
-   * # Invariants
-   *
-   * - within each list, all events are classed by
-   *   chronological order;
-   * - all events are events such that
-   *  `asVisibilityEvent()` returns a non-null `IVisibilityChange`;
-   * - within each list with key `eventId`, all events
-   *   are in relation to `eventId`.
-   *
-   * @experimental
-   */
-
   /**
    * Construct a new Room.
    *
@@ -15129,33 +15148,97 @@ class Room extends _readReceipt.ReadReceipt {
     this.opts = opts;
     (0, _defineProperty2.default)(this, "reEmitter", void 0);
     (0, _defineProperty2.default)(this, "txnToEvent", {});
+    // Pending in-flight requests { string: MatrixEvent }
     (0, _defineProperty2.default)(this, "notificationCounts", {});
     (0, _defineProperty2.default)(this, "threadNotifications", new Map());
     (0, _defineProperty2.default)(this, "cachedThreadReadReceipts", new Map());
+    // Useful to know at what point the current user has started using threads in this room
     (0, _defineProperty2.default)(this, "oldestThreadedReceiptTs", Infinity);
+    /**
+     * A record of the latest unthread receipts per user
+     * This is useful in determining whether a user has read a thread or not
+     */
     (0, _defineProperty2.default)(this, "unthreadedReceipts", new Map());
     (0, _defineProperty2.default)(this, "timelineSets", void 0);
     (0, _defineProperty2.default)(this, "threadsTimelineSets", []);
+    // any filtered timeline sets we're maintaining for this room
     (0, _defineProperty2.default)(this, "filteredTimelineSets", {});
+    // filter_id: timelineSet
     (0, _defineProperty2.default)(this, "timelineNeedsRefresh", false);
     (0, _defineProperty2.default)(this, "pendingEventList", void 0);
+    // read by megolm via getter; boolean value - null indicates "use global value"
     (0, _defineProperty2.default)(this, "blacklistUnverifiedDevices", void 0);
     (0, _defineProperty2.default)(this, "selfMembership", void 0);
     (0, _defineProperty2.default)(this, "summaryHeroes", null);
+    // flags to stop logspam about missing m.room.create events
     (0, _defineProperty2.default)(this, "getTypeWarning", false);
     (0, _defineProperty2.default)(this, "getVersionWarning", false);
     (0, _defineProperty2.default)(this, "membersPromise", void 0);
+    // XXX: These should be read-only
+    /**
+     * The human-readable display name for this room.
+     */
     (0, _defineProperty2.default)(this, "name", void 0);
+    /**
+     * The un-homoglyphed name for this room.
+     */
     (0, _defineProperty2.default)(this, "normalizedName", void 0);
+    /**
+     * Dict of room tags; the keys are the tag name and the values
+     * are any metadata associated with the tag - e.g. `{ "fav" : { order: 1 } }`
+     */
     (0, _defineProperty2.default)(this, "tags", {});
+    // $tagName: { $metadata: $value }
+    /**
+     * accountData Dict of per-room account_data events; the keys are the
+     * event type and the values are the events.
+     */
     (0, _defineProperty2.default)(this, "accountData", {});
+    // $eventType: $event
+    /**
+     * The room summary.
+     */
     (0, _defineProperty2.default)(this, "summary", null);
+    // legacy fields
+    /**
+     * The live event timeline for this room, with the oldest event at index 0.
+     * Present for backwards compatibility - prefer getLiveTimeline().getEvents()
+     */
     (0, _defineProperty2.default)(this, "timeline", void 0);
+    /**
+     * oldState The state of the room at the time of the oldest
+     * event in the live timeline. Present for backwards compatibility -
+     * prefer getLiveTimeline().getState(EventTimeline.BACKWARDS).
+     */
     (0, _defineProperty2.default)(this, "oldState", void 0);
+    /**
+     * currentState The state of the room at the time of the
+     * newest event in the timeline. Present for backwards compatibility -
+     * prefer getLiveTimeline().getState(EventTimeline.FORWARDS).
+     */
     (0, _defineProperty2.default)(this, "currentState", void 0);
     (0, _defineProperty2.default)(this, "relations", new _relationsContainer.RelationsContainer(this.client, this));
+    /**
+     * @experimental
+     */
     (0, _defineProperty2.default)(this, "threads", new Map());
     (0, _defineProperty2.default)(this, "lastThread", void 0);
+    /**
+     * A mapping of eventId to all visibility changes to apply
+     * to the event, by chronological order, as per
+     * https://github.com/matrix-org/matrix-doc/pull/3531
+     *
+     * # Invariants
+     *
+     * - within each list, all events are classed by
+     *   chronological order;
+     * - all events are events such that
+     *  `asVisibilityEvent()` returns a non-null `IVisibilityChange`;
+     * - within each list with key `eventId`, all events
+     *   are in relation to `eventId`.
+     *
+     * @experimental
+     */
     (0, _defineProperty2.default)(this, "visibilityEvents", new Map());
     (0, _defineProperty2.default)(this, "threadTimelineSetsPromise", null);
     (0, _defineProperty2.default)(this, "threadsReady", false);
@@ -17092,6 +17175,10 @@ class Room extends _readReceipt.ReadReceipt {
    * @throws If `duplicateStrategy` is not falsey, 'replace' or 'ignore'.
    */
 
+  /**
+   * @deprecated In favor of the overload with `IAddLiveEventOptions`
+   */
+
   addLiveEvents(events, duplicateStrategyOrOpts, fromCache = false) {
     let duplicateStrategy = duplicateStrategyOrOpts;
     let timelineWasEmpty = false;
@@ -17140,7 +17227,6 @@ class Room extends _readReceipt.ReadReceipt {
           continue; // we can skip adding the event to the timeline sets, it is already there
         }
       }
-
       const {
         shouldLiveInRoom,
         shouldLiveInThread,
@@ -17325,7 +17411,6 @@ class Room extends _readReceipt.ReadReceipt {
         });
       }
     }
-
     const oldName = this.name;
     this.name = this.calculateRoomName(this.myUserId);
     this.normalizedName = (0, utils.normalize)(this.name);
@@ -17901,34 +17986,6 @@ var AutoDiscoveryError;
  * for users to log in to.
  */
 class AutoDiscovery {
-  // Dev note: the constants defined here are related to but not
-  // exactly the same as those in the spec. This is to hopefully
-  // translate the meaning of the states in the spec, but also
-  // support our own if needed.
-
-  /**
-   * The auto discovery failed. The client is expected to communicate
-   * the error to the user and refuse logging in.
-   */
-
-  /**
-   * The auto discovery failed, however the client may still recover
-   * from the problem. The client is recommended to that the same
-   * action it would for PROMPT while also warning the user about
-   * what went wrong. The client may also treat this the same as
-   * a FAIL_ERROR state.
-   */
-
-  /**
-   * The auto discovery didn't fail but did not find anything of
-   * interest. The client is expected to prompt the user for more
-   * information, or fail if it prefers.
-   */
-
-  /**
-   * The auto discovery was successful.
-   */
-
   /**
    * Validates and verifies client configuration information for purposes
    * of logging in. Such information includes the homeserver URL
@@ -18268,6 +18325,10 @@ class AutoDiscovery {
   }
 }
 exports.AutoDiscovery = AutoDiscovery;
+// Dev note: the constants defined here are related to but not
+// exactly the same as those in the spec. This is to hopefully
+// translate the meaning of the states in the spec, but also
+// support our own if needed.
 (0, _defineProperty2.default)(AutoDiscovery, "ERROR_INVALID", AutoDiscoveryError.Invalid);
 (0, _defineProperty2.default)(AutoDiscovery, "ERROR_GENERIC_FAILURE", AutoDiscoveryError.GenericFailure);
 (0, _defineProperty2.default)(AutoDiscovery, "ERROR_INVALID_HS_BASE_URL", AutoDiscoveryError.InvalidHsBaseUrl);
@@ -18278,9 +18339,28 @@ exports.AutoDiscovery = AutoDiscovery;
 (0, _defineProperty2.default)(AutoDiscovery, "ERROR_MISSING_WELLKNOWN", AutoDiscoveryError.MissingWellknown);
 (0, _defineProperty2.default)(AutoDiscovery, "ERROR_INVALID_JSON", AutoDiscoveryError.InvalidJson);
 (0, _defineProperty2.default)(AutoDiscovery, "ALL_ERRORS", Object.keys(AutoDiscoveryError));
+/**
+ * The auto discovery failed. The client is expected to communicate
+ * the error to the user and refuse logging in.
+ */
 (0, _defineProperty2.default)(AutoDiscovery, "FAIL_ERROR", AutoDiscoveryAction.FAIL_ERROR);
+/**
+ * The auto discovery failed, however the client may still recover
+ * from the problem. The client is recommended to that the same
+ * action it would for PROMPT while also warning the user about
+ * what went wrong. The client may also treat this the same as
+ * a FAIL_ERROR state.
+ */
 (0, _defineProperty2.default)(AutoDiscovery, "FAIL_PROMPT", AutoDiscoveryAction.FAIL_PROMPT);
+/**
+ * The auto discovery didn't fail but did not find anything of
+ * interest. The client is expected to prompt the user for more
+ * information, or fail if it prefers.
+ */
 (0, _defineProperty2.default)(AutoDiscovery, "PROMPT", AutoDiscoveryAction.PROMPT);
+/**
+ * The auto discovery was successful.
+ */
 (0, _defineProperty2.default)(AutoDiscovery, "SUCCESS", AutoDiscoveryAction.SUCCESS);
 (0, _defineProperty2.default)(AutoDiscovery, "fetchFn", void 0);
 //# sourceMappingURL=autodiscovery.js.map
@@ -18495,12 +18575,11 @@ limitations under the License.
 */
 
 class RelationsContainer {
-  // A tree of objects to access a set of related children for an event, as in:
-  // this.relations.get(parentEventId).get(relationType).get(relationEventType)
-
   constructor(client, room) {
     this.client = client;
     this.room = room;
+    // A tree of objects to access a set of related children for an event, as in:
+    // this.relations.get(parentEventId).get(relationType).get(relationEventType)
     (0, _defineProperty2.default)(this, "relations", new Map());
   }
 
@@ -19019,16 +19098,6 @@ exports.Direction = Direction;
 })(Direction || (exports.Direction = Direction = {}));
 class EventTimeline {
   /**
-   * Symbolic constant for methods which take a 'direction' argument:
-   * refers to the start of the timeline, or backwards in time.
-   */
-
-  /**
-   * Symbolic constant for methods which take a 'direction' argument:
-   * refers to the end of the timeline, or forwards in time.
-   */
-
-  /**
    * Static helper method to set sender and target properties
    *
    * @param event -   the event whose metadata is to be set
@@ -19086,6 +19155,8 @@ class EventTimeline {
     (0, _defineProperty2.default)(this, "baseIndex", 0);
     (0, _defineProperty2.default)(this, "startState", void 0);
     (0, _defineProperty2.default)(this, "endState", void 0);
+    // If we have a roomId then we delegate pagination token storage to the room state objects `startState` and
+    // `endState`, but for things like the notification timeline which mix multiple rooms we store the tokens ourselves.
     (0, _defineProperty2.default)(this, "startToken", null);
     (0, _defineProperty2.default)(this, "endToken", null);
     (0, _defineProperty2.default)(this, "prevTimeline", null);
@@ -19331,6 +19402,10 @@ class EventTimeline {
    * @param options - addEvent options
    */
 
+  /**
+   * @deprecated In favor of the overload with `IAddEventOptions`
+   */
+
   addEvent(event, toStartOfTimelineOrOpts, roomState) {
     let toStartOfTimeline = !!toStartOfTimelineOrOpts;
     let timelineWasEmpty;
@@ -19415,7 +19490,15 @@ class EventTimeline {
   }
 }
 exports.EventTimeline = EventTimeline;
+/**
+ * Symbolic constant for methods which take a 'direction' argument:
+ * refers to the start of the timeline, or backwards in time.
+ */
 (0, _defineProperty2.default)(EventTimeline, "BACKWARDS", Direction.Backward);
+/**
+ * Symbolic constant for methods which take a 'direction' argument:
+ * refers to the end of the timeline, or forwards in time.
+ */
 (0, _defineProperty2.default)(EventTimeline, "FORWARDS", Direction.Forward);
 //# sourceMappingURL=event-timeline.js.map
 
@@ -23290,6 +23373,13 @@ function checkPayloadLength(payloadString) {
     throw new PayloadTooLargeError(`Message too long (${payloadString.length} bytes). ` + `The maximum for an encrypted message is ${MAX_PLAINTEXT_LENGTH} bytes.`);
   }
 }
+
+/** data stored in the session store about an inbound group session */
+
+/* eslint-disable camelcase */
+
+/* eslint-enable camelcase */
+
 /**
  * Manages the olm cryptography functions. Each OlmDevice has a single
  * OlmAccount and a number of OlmSessions.
@@ -23299,46 +23389,40 @@ function checkPayloadLength(payloadString) {
 class OlmDevice {
   // set by consumers
 
-  /** Curve25519 key for the account, unknown until we load the account from storage in init() */
-
-  /** Ed25519 key for the account, unknown until we load the account from storage in init() */
-
-  // we don't bother stashing outboundgroupsessions in the cryptoStore -
-  // instead we keep them here.
-
-  // Store a set of decrypted message indexes for each group session.
-  // This partially mitigates a replay attack where a MITM resends a group
-  // message into the room.
-  //
-  // When we decrypt a message and the message index matches a previously
-  // decrypted message, one possible cause of that is that we are decrypting
-  // the same event, and may not indicate an actual replay attack.  For
-  // example, this could happen if we receive events, forget about them, and
-  // then re-fetch them when we backfill.  So we store the event ID and
-  // timestamp corresponding to each message index when we first decrypt it,
-  // and compare these against the event ID and timestamp every time we use
-  // that same index.  If they match, then we're probably decrypting the same
-  // event and we don't consider it a replay attack.
-  //
-  // Keys are strings of form "<senderKey>|<session_id>|<message_index>"
-  // Values are objects of the form "{id: <event id>, timestamp: <ts>}"
-
-  // Keep track of sessions that we're starting, so that we don't start
-  // multiple sessions for the same device at the same time.
-  // set by consumers
-
-  // Used by olm to serialise prekey message decryptions
-  // set by consumers
-
   constructor(cryptoStore) {
     this.cryptoStore = cryptoStore;
     (0, _defineProperty2.default)(this, "pickleKey", "DEFAULT_KEY");
+    // set by consumers
+    /** Curve25519 key for the account, unknown until we load the account from storage in init() */
     (0, _defineProperty2.default)(this, "deviceCurve25519Key", null);
+    /** Ed25519 key for the account, unknown until we load the account from storage in init() */
     (0, _defineProperty2.default)(this, "deviceEd25519Key", null);
     (0, _defineProperty2.default)(this, "maxOneTimeKeys", null);
+    // we don't bother stashing outboundgroupsessions in the cryptoStore -
+    // instead we keep them here.
     (0, _defineProperty2.default)(this, "outboundGroupSessionStore", {});
+    // Store a set of decrypted message indexes for each group session.
+    // This partially mitigates a replay attack where a MITM resends a group
+    // message into the room.
+    //
+    // When we decrypt a message and the message index matches a previously
+    // decrypted message, one possible cause of that is that we are decrypting
+    // the same event, and may not indicate an actual replay attack.  For
+    // example, this could happen if we receive events, forget about them, and
+    // then re-fetch them when we backfill.  So we store the event ID and
+    // timestamp corresponding to each message index when we first decrypt it,
+    // and compare these against the event ID and timestamp every time we use
+    // that same index.  If they match, then we're probably decrypting the same
+    // event and we don't consider it a replay attack.
+    //
+    // Keys are strings of form "<senderKey>|<session_id>|<message_index>"
+    // Values are objects of the form "{id: <event id>, timestamp: <ts>}"
     (0, _defineProperty2.default)(this, "inboundGroupSessionMessageIndexes", {});
+    // Keep track of sessions that we're starting, so that we don't start
+    // multiple sessions for the same device at the same time.
     (0, _defineProperty2.default)(this, "sessionsInProgress", {});
+    // set by consumers
+    // Used by olm to serialise prekey message decryptions
     (0, _defineProperty2.default)(this, "olmPrekeyPromise", Promise.resolve());
   }
 
@@ -24121,7 +24205,6 @@ class OlmDevice {
               // If the sessions have the same index, go ahead and store the new trusted one.
             }
           }
-
           _logger.logger.info(`Storing megolm session ${senderKey}|${sessionId} with first index ` + session.first_known_index());
           const sessionData = Object.assign({}, extraSessionData, {
             room_id: roomId,
@@ -24453,7 +24536,24 @@ var _roomState = __webpack_require__("866a");
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2016 OpenMarket Ltd
+Copyright 2017 Vector Creations Ltd
+Copyright 2018-2019 New Vector Ltd
+Copyright 2019-2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 const DeviceVerification = _deviceinfo.DeviceInfo.DeviceVerification;
 const defaultVerificationMethods = {
   [_QRCode.ReciprocateQRCode.NAME]: _QRCode.ReciprocateQRCode,
@@ -24478,6 +24578,20 @@ function isCryptoAvailable() {
   return Boolean(global.Olm);
 }
 const MIN_FORCE_SESSION_INTERVAL_MS = 60 * 60 * 1000;
+
+/* eslint-disable camelcase */
+
+/**
+ * The parameters of a room key request. The details of the request may
+ * vary with the crypto algorithm, but the management and storage layers for
+ * outgoing requests expect it to have 'room_id' and 'session_id' properties.
+ */
+
+/* eslint-enable camelcase */
+
+/* eslint-disable camelcase */
+
+/* eslint-enable camelcase */
 let CryptoEvent;
 exports.CryptoEvent = CryptoEvent;
 (function (CryptoEvent) {
@@ -24547,23 +24661,50 @@ class Crypto extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "toDeviceVerificationRequests", void 0);
     (0, _defineProperty2.default)(this, "inRoomVerificationRequests", void 0);
     (0, _defineProperty2.default)(this, "trustCrossSignedDevices", true);
+    // the last time we did a check for the number of one-time-keys on the server.
     (0, _defineProperty2.default)(this, "lastOneTimeKeyCheck", null);
     (0, _defineProperty2.default)(this, "oneTimeKeyCheckInProgress", false);
+    // EncryptionAlgorithm instance for each room
     (0, _defineProperty2.default)(this, "roomEncryptors", new Map());
+    // map from algorithm to DecryptionAlgorithm instance, for each room
     (0, _defineProperty2.default)(this, "roomDecryptors", new Map());
     (0, _defineProperty2.default)(this, "deviceKeys", {});
+    // type: key
     (0, _defineProperty2.default)(this, "globalBlacklistUnverifiedDevices", false);
     (0, _defineProperty2.default)(this, "globalErrorOnUnknownDevices", true);
+    // list of IncomingRoomKeyRequests/IncomingRoomKeyRequestCancellations
+    // we received in the current sync.
     (0, _defineProperty2.default)(this, "receivedRoomKeyRequests", []);
     (0, _defineProperty2.default)(this, "receivedRoomKeyRequestCancellations", []);
+    // true if we are currently processing received room key requests
     (0, _defineProperty2.default)(this, "processingRoomKeyRequests", false);
+    // controls whether device tracking is delayed
+    // until calling encryptEvent or trackRoomDevices,
+    // or done immediately upon enabling room encryption.
     (0, _defineProperty2.default)(this, "lazyLoadMembers", false);
+    // in case lazyLoadMembers is true,
+    // track if an initial tracking of all the room members
+    // has happened for a given room. This is delayed
+    // to avoid loading room members as long as possible.
     (0, _defineProperty2.default)(this, "roomDeviceTrackingState", {});
+    // The timestamp of the last time we forced establishment
+    // of a new session for each device, in milliseconds.
+    // {
+    //     userId: {
+    //         deviceId: 1234567890000,
+    //     },
+    // }
     (0, _defineProperty2.default)(this, "lastNewSessionForced", {});
+    // This flag will be unset whilst the client processes a sync response
+    // so that we don't start requesting keys until we've actually finished
+    // processing the response.
     (0, _defineProperty2.default)(this, "sendKeyRequestsImmediately", false);
     (0, _defineProperty2.default)(this, "oneTimeKeyCount", void 0);
     (0, _defineProperty2.default)(this, "needsNewFallback", void 0);
     (0, _defineProperty2.default)(this, "fallbackCleanup", void 0);
+    /*
+     * Event handler for DeviceList's userNewDevices event
+     */
     (0, _defineProperty2.default)(this, "onDeviceListUserCrossSigningUpdated", async userId => {
       if (userId === this.userId) {
         // An update to our own cross-signing key.
@@ -24638,6 +24779,16 @@ class Crypto extends _typedEventEmitter.TypedEventEmitter {
         _logger.logger.error("Error handling toDeviceEvent:", e);
       }
     });
+    /**
+     * Handle key verification requests sent as timeline events
+     *
+     * @internal
+     * @param event - the timeline event
+     * @param room - not used
+     * @param atStart - not used
+     * @param removed - not used
+     * @param whether - this is a live event
+     */
     (0, _defineProperty2.default)(this, "onTimelineEvent", (event, room, atStart, removed, {
       liveEvent = true
     } = {}) => {
@@ -25394,7 +25545,6 @@ class Crypto extends _typedEventEmitter.TypedEventEmitter {
             this.baseApis.emit(CryptoEvent.KeySignatureUploadFailure, failures, "afterCrossSigningLocalKeyChange", upload // continuation
             );
           }
-
           throw new _errors.KeySignatureUploadError("Key upload failed", {
             failures
           });
@@ -25576,11 +25726,6 @@ class Crypto extends _typedEventEmitter.TypedEventEmitter {
     const userCrossSigning = this.deviceList.getStoredCrossSigningForUser(this.userId);
     return (_userCrossSigning$che = userCrossSigning === null || userCrossSigning === void 0 ? void 0 : userCrossSigning.checkDeviceTrust(userCrossSigning, device, false, true).isCrossSigningVerified()) !== null && _userCrossSigning$che !== void 0 ? _userCrossSigning$che : false;
   }
-
-  /*
-   * Event handler for DeviceList's userNewDevices event
-   */
-
   /**
    * Check the copy of our cross-signing key that we have in the device list and
    * see if we can get the private key. If so, mark it as trusted.
@@ -26170,7 +26315,6 @@ class Crypto extends _typedEventEmitter.TypedEventEmitter {
           // This will emit events when it comes back down the sync
           // (we could do local echo to speed things up)
         }
-
         return device; // TODO types
       } else {
         return xsk;
@@ -26240,7 +26384,6 @@ class Crypto extends _typedEventEmitter.TypedEventEmitter {
               this.baseApis.emit(CryptoEvent.KeySignatureUploadFailure, failures, "setDeviceVerification", upload // continuation
               );
             }
-
             throw new _errors.KeySignatureUploadError("Key upload failed", {
               failures
             });
@@ -26252,7 +26395,6 @@ class Crypto extends _typedEventEmitter.TypedEventEmitter {
         // XXX: we'll need to wait for the device list to be updated
       }
     }
-
     const deviceObj = _deviceinfo.DeviceInfo.fromStorage(dev, deviceId);
     this.emit(CryptoEvent.DeviceVerificationChanged, userId, deviceId, deviceObj);
     return deviceObj;
@@ -27195,18 +27337,6 @@ class Crypto extends _typedEventEmitter.TypedEventEmitter {
     };
     this.handleVerificationEvent(event, this.toDeviceVerificationRequests, createRequest);
   }
-
-  /**
-   * Handle key verification requests sent as timeline events
-   *
-   * @internal
-   * @param event - the timeline event
-   * @param room - not used
-   * @param atStart - not used
-   * @param removed - not used
-   * @param whether - this is a live event
-   */
-
   async handleVerificationEvent(event, requestsMap, createRequest, isLiveEvent = true) {
     // Wait for event to get its final ID with pendingEventOrdering: "chronological", since DM channels depend on it.
     if (event.isSending() && event.status != _event2.EventStatus.SENT) {
@@ -27638,23 +27768,19 @@ function fixBackupKey(key) {
  * Represents a received m.room_key_request event
  */
 class IncomingRoomKeyRequest {
-  /** user requesting the key */
-
-  /** device requesting the key */
-
-  /** unique id for the request */
-
-  /**
-   * callback which, when called, will ask
-   *    the relevant crypto algorithm implementation to share the keys for
-   *    this request.
-   */
-
   constructor(event) {
+    /** user requesting the key */
     (0, _defineProperty2.default)(this, "userId", void 0);
+    /** device requesting the key */
     (0, _defineProperty2.default)(this, "deviceId", void 0);
+    /** unique id for the request */
     (0, _defineProperty2.default)(this, "requestId", void 0);
     (0, _defineProperty2.default)(this, "requestBody", void 0);
+    /**
+     * callback which, when called, will ask
+     *    the relevant crypto algorithm implementation to share the keys for
+     *    this request.
+     */
     (0, _defineProperty2.default)(this, "share", void 0);
     const content = event.getContent();
     this.userId = event.getSender();
@@ -27672,15 +27798,12 @@ class IncomingRoomKeyRequest {
  */
 exports.IncomingRoomKeyRequest = IncomingRoomKeyRequest;
 class IncomingRoomKeyRequestCancellation {
-  /** user requesting the cancellation */
-
-  /** device requesting the cancellation */
-
-  /** unique id for the request to be cancelled */
-
   constructor(event) {
+    /** user requesting the cancellation */
     (0, _defineProperty2.default)(this, "userId", void 0);
+    /** device requesting the cancellation */
     (0, _defineProperty2.default)(this, "deviceId", void 0);
+    /** unique id for the request to be cancelled */
     (0, _defineProperty2.default)(this, "requestId", void 0);
     const content = event.getContent();
     this.userId = event.getSender();
@@ -28777,7 +28900,7 @@ encoders.pem = __webpack_require__("85b3");
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/pmenu/index.vue?vue&type=template&id=06f73298&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/pmenu/index.vue?vue&type=template&id=06f73298&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -29210,33 +29333,33 @@ function isValidFilterId(filterId) {
   return isValidStr || typeof filterId === "number";
 }
 class MemoryStore {
-  // roomId: Room
-  // userId: User
-
-  // userId: {
-  //    filterId: Filter
-  // }
-
-  // type : content
-
-  // roomId: [member events]
-
   /**
    * Construct a new in-memory data store for the Matrix Client.
    * @param opts - Config options
    */
   constructor(opts = {}) {
     (0, _defineProperty2.default)(this, "rooms", {});
+    // roomId: Room
     (0, _defineProperty2.default)(this, "users", {});
+    // userId: User
     (0, _defineProperty2.default)(this, "syncToken", null);
+    // userId: {
+    //    filterId: Filter
+    // }
     (0, _defineProperty2.default)(this, "filters", {});
     (0, _defineProperty2.default)(this, "accountData", {});
+    // type : content
     (0, _defineProperty2.default)(this, "localStorage", void 0);
     (0, _defineProperty2.default)(this, "oobMembers", {});
+    // roomId: [member events]
     (0, _defineProperty2.default)(this, "pendingEvents", {});
     (0, _defineProperty2.default)(this, "clientOptions", void 0);
     (0, _defineProperty2.default)(this, "pendingToDeviceBatches", []);
     (0, _defineProperty2.default)(this, "nextToDeviceBatchId", 0);
+    /**
+     * Called when a room member in a room being tracked by this store has been
+     * updated.
+     */
     (0, _defineProperty2.default)(this, "onRoomMember", (event, state, member) => {
       if (member.membership === "invite") {
         // We do NOT add invited members because people love to typo user IDs
@@ -29293,12 +29416,6 @@ class MemoryStore {
       this.onRoomMember(null, room.currentState, m);
     });
   }
-
-  /**
-   * Called when a room member in a room being tracked by this store has been
-   * updated.
-   */
-
   /**
    * Retrieve a room by its' room ID.
    * @param roomId - The room ID.
@@ -30367,7 +30484,6 @@ class EventTimelineSet extends _typedEventEmitter.TypedEventEmitter {
         }
         continue; // abort splicing - try next event
       }
-
       timeline.setNeighbouringTimeline(existingTimeline, direction);
       existingTimeline.setNeighbouringTimeline(timeline, inverseDirection);
       timeline = existingTimeline;
@@ -30395,6 +30511,10 @@ class EventTimelineSet extends _typedEventEmitter.TypedEventEmitter {
    *
    * @param event - Event to be added
    * @param options - addLiveEvent options
+   */
+
+  /**
+   * @deprecated In favor of the overload with `IAddLiveEventOptions`
    */
 
   addLiveEvent(event, duplicateStrategyOrOpts, fromCache = false, roomState) {
@@ -30459,6 +30579,10 @@ class EventTimelineSet extends _typedEventEmitter.TypedEventEmitter {
    *
    * @remarks
    * Fires {@link RoomEvent.Timeline}
+   */
+
+  /**
+   * @deprecated In favor of the overload with `IAddEventToTimelineOptions`
    */
 
   addEventToTimeline(event, timeline, toStartOfTimelineOrOpts, fromCache = false, roomState) {
@@ -34367,13 +34491,6 @@ function getCallUserId(call) {
   return ((_call$getOpponentMemb = call.getOpponentMember()) === null || _call$getOpponentMemb === void 0 ? void 0 : _call$getOpponentMemb.userId) || call.invitee || null;
 }
 class GroupCall extends _typedEventEmitter.TypedEventEmitter {
-  // Config
-
-  // user_id -> device_id -> MatrixCall
-  // user_id -> device_id -> ICallHandlers
-
-  // user_id -> device_id -> count
-
   constructor(client, room, type, isPtt, intent, groupCallId, dataChannelsEnabled, dataChannelOptions) {
     var _room$currentState$ge, _room$currentState$ge2;
     super();
@@ -34384,6 +34501,7 @@ class GroupCall extends _typedEventEmitter.TypedEventEmitter {
     this.intent = intent;
     this.dataChannelsEnabled = dataChannelsEnabled;
     this.dataChannelOptions = dataChannelOptions;
+    // Config
     (0, _defineProperty2.default)(this, "activeSpeakerInterval", 1000);
     (0, _defineProperty2.default)(this, "retryCallInterval", 5000);
     (0, _defineProperty2.default)(this, "participantTimeout", 1000 * 15);
@@ -34396,10 +34514,13 @@ class GroupCall extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "screenshareFeeds", []);
     (0, _defineProperty2.default)(this, "groupCallId", void 0);
     (0, _defineProperty2.default)(this, "calls", new Map());
+    // user_id -> device_id -> MatrixCall
     (0, _defineProperty2.default)(this, "callHandlers", new Map());
+    // user_id -> device_id -> ICallHandlers
     (0, _defineProperty2.default)(this, "activeSpeakerLoopInterval", void 0);
     (0, _defineProperty2.default)(this, "retryCallLoopInterval", void 0);
     (0, _defineProperty2.default)(this, "retryCallCounts", new Map());
+    // user_id -> device_id -> count
     (0, _defineProperty2.default)(this, "reEmitter", void 0);
     (0, _defineProperty2.default)(this, "transmitTimer", null);
     (0, _defineProperty2.default)(this, "participantsExpirationTimer", null);
@@ -34411,6 +34532,14 @@ class GroupCall extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "_participants", new Map());
     (0, _defineProperty2.default)(this, "_creationTs", null);
     (0, _defineProperty2.default)(this, "_enteredViaAnotherSession", false);
+    /*
+     * Call Setup
+     *
+     * There are two different paths for calls to be created:
+     * 1. Incoming calls triggered by the Call.incoming event.
+     * 2. Outgoing calls to the initial members of a room or new members
+     *    as they are observed by the RoomState.members event.
+     */
     (0, _defineProperty2.default)(this, "onIncomingCall", newCall => {
       var _newCall$getOpponentM, _this$calls$get;
       // The incoming calls may be for another room, which we will ignore.
@@ -34948,16 +35077,6 @@ class GroupCall extends _typedEventEmitter.TypedEventEmitter {
   isScreensharing() {
     return !!this.localScreenshareFeed;
   }
-
-  /*
-   * Call Setup
-   *
-   * There are two different paths for calls to be created:
-   * 1. Incoming calls triggered by the Call.incoming event.
-   * 2. Outgoing calls to the initial members of a room or new members
-   *    as they are observed by the RoomState.members event.
-   */
-
   /**
    * Determines whether a given participant expects us to call them (versus
    * them calling us).
@@ -35293,7 +35412,6 @@ class GroupCall extends _typedEventEmitter.TypedEventEmitter {
       // TODO: Add data channels
     }]);
   }
-
   async updateMemberState() {
     // Clear the old update interval before proceeding
     if (this.resendMemberStateTimer !== null) {
@@ -35425,7 +35543,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); } /*
-                                                                                                                                                                                                                                                                                                                                                                                               * Copyright 2020 - 2021 The Matrix.org Foundation C.I.C.
+                                                                                                                                                                                                                                                                                                                                                                                               * Copyright 2020 - 2024 The Matrix.org Foundation C.I.C.
                                                                                                                                                                                                                                                                                                                                                                                                *
                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
@@ -35490,6 +35608,44 @@ var WidgetDriver = /*#__PURE__*/function () {
     value: function sendEvent(eventType, content) {
       var stateKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
       var roomId = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+      return Promise.reject(new Error("Failed to override function"));
+    }
+
+    /**
+     * @experimental Part of MSC4140 & MSC4157
+     * Sends a delayed event into a room. If `roomId` is falsy, the client should send it
+     * into the room the user is currently looking at. The widget API will have already
+     * verified that the widget is capable of sending the event to that room.
+     * @param {number|null} delay How much later to send the event, or null to not send the
+     * event automatically. May not be null if {@link parentDelayId} is null.
+     * @param {string|null} parentDelayId The ID of the delayed event this one is grouped with,
+     * or null if it will be put in a new group. May not be null if {@link delay} is null.
+     * @param {string} eventType The event type of the event to be sent.
+     * @param {*} content The content for the event to be sent.
+     * @param {string|null} stateKey The state key if the event to be sent a state event,
+     * otherwise null. May be an empty string.
+     * @param {string|null} roomId The room ID to send the event to. If falsy, the room the
+     * user is currently looking at.
+     * @returns {Promise<ISendDelayedEventDetails>} Resolves when the delayed event has been
+     * prepared with details of how to refer to it for updating/sending/canceling it later.
+     * @throws Rejected when the delayed event could not be sent.
+     */
+  }, {
+    key: "sendDelayedEvent",
+    value: function sendDelayedEvent(delay, parentDelayId, eventType, content) {
+      var stateKey = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
+      var roomId = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : null;
+      return Promise.reject(new Error("Failed to override function"));
+    }
+
+    /**
+     * @experimental Part of MSC4140 & MSC4157
+     * Run the specified {@link action} for the delayed event matching the provided {@link delayId}.
+     * @throws Rejected when there is no matching delayed event, or when the action failed to run.
+     */
+  }, {
+    key: "updateDelayedEvent",
+    value: function updateDelayedEvent(delayId, action) {
       return Promise.reject(new Error("Failed to override function"));
     }
 
@@ -39781,7 +39937,21 @@ var _uuid = __webpack_require__("e144");
 var _logger = __webpack_require__("5b5f");
 var _event = __webpack_require__("60af");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2017 - 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 /**
  * Internal module. Management of outgoing room key requests.
  *
@@ -39831,17 +40001,15 @@ exports.RoomKeyRequestState = RoomKeyRequestState;
   RoomKeyRequestState[RoomKeyRequestState["CancellationPendingAndWillResend"] = 3] = "CancellationPendingAndWillResend";
 })(RoomKeyRequestState || (exports.RoomKeyRequestState = RoomKeyRequestState = {}));
 class OutgoingRoomKeyRequestManager {
-  // handle for the delayed call to sendOutgoingRoomKeyRequests. Non-null
-  // if the callback has been set, or if it is still running.
-
-  // sanity check to ensure that we don't end up with two concurrent runs
-  // of sendOutgoingRoomKeyRequests
-
   constructor(baseApis, deviceId, cryptoStore) {
     this.baseApis = baseApis;
     this.deviceId = deviceId;
     this.cryptoStore = cryptoStore;
+    // handle for the delayed call to sendOutgoingRoomKeyRequests. Non-null
+    // if the callback has been set, or if it is still running.
     (0, _defineProperty2.default)(this, "sendOutgoingRoomKeyRequestsTimer", void 0);
+    // sanity check to ensure that we don't end up with two concurrent runs
+    // of sendOutgoingRoomKeyRequests
     (0, _defineProperty2.default)(this, "sendOutgoingRoomKeyRequestsRunning", false);
     (0, _defineProperty2.default)(this, "clientRunning", true);
   }
@@ -39945,7 +40113,6 @@ class OutgoingRoomKeyRequestManager {
               // still need to resend the request which is now UNSENT, so
               // start the timer if it isn't already started.
             }
-
             break;
           }
         default:
@@ -40193,7 +40360,21 @@ var _logger = __webpack_require__("5b5f");
 var _readReceipt = __webpack_require__("7ccd");
 var _read_receipts = __webpack_require__("283b");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2021 - 2023 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 let ThreadEvent;
 exports.ThreadEvent = ThreadEvent;
 (function (ThreadEvent) {
@@ -40224,20 +40405,14 @@ function determineFeatureSupport(stable, unstable) {
  * @experimental
  */
 class Thread extends _readReceipt.ReadReceipt {
-  /**
-   * A reference to all the events ID at the bottom of the threads
-   */
-
-  /**
-   * An array of events to add to the timeline once the thread has been initialised
-   * with server suppport.
-   */
-
   constructor(id, rootEvent, opts) {
     var _opts$pendingEventOrd;
     super();
     this.id = id;
     this.rootEvent = rootEvent;
+    /**
+     * A reference to all the events ID at the bottom of the threads
+     */
     (0, _defineProperty2.default)(this, "timelineSet", void 0);
     (0, _defineProperty2.default)(this, "timeline", []);
     (0, _defineProperty2.default)(this, "_currentUserParticipated", false);
@@ -40250,6 +40425,10 @@ class Thread extends _readReceipt.ReadReceipt {
     (0, _defineProperty2.default)(this, "client", void 0);
     (0, _defineProperty2.default)(this, "pendingEventOrdering", void 0);
     (0, _defineProperty2.default)(this, "initialEventsFetched", !Thread.hasServerSideSupport);
+    /**
+     * An array of events to add to the timeline once the thread has been initialised
+     * with server suppport.
+     */
     (0, _defineProperty2.default)(this, "replayEvents", []);
     (0, _defineProperty2.default)(this, "onBeforeRedaction", (event, redaction) => {
       if (event !== null && event !== void 0 && event.isRelation(THREAD_RELATION_TYPE.name) && this.room.eventShouldLiveIn(event).threadId === this.id && event.getId() !== this.id &&
@@ -107382,7 +107561,28 @@ var _feature = __webpack_require__("082a");
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015 - 2022 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/ /*
+ * TODO:
+ * This class mainly serves to take all the syncing logic out of client.js and
+ * into a separate file. It's all very fluid, and this class gut wrenches a lot
+ * of MatrixClient props (e.g. http). Given we want to support WebSockets as
+ * an alternative syncing API, we may want to have a proper syncing interface
+ * for HTTP and WS at some point.
+ */
 const DEBUG = true;
 
 // /sync requests allow you to set a timeout= but the request may continue
@@ -107445,10 +107645,6 @@ function defaultSyncApiOpts(syncOpts) {
   }, syncOpts);
 }
 class SyncApi {
-  // additional data (eg. error object for failed sync)
-
-  // accumulator of sync events in the current sync response
-  // Number of consecutive failed /sync requests
   // flag set if the store needs to be cleared before we can start
 
   /**
@@ -107467,12 +107663,15 @@ class SyncApi {
     (0, _defineProperty2.default)(this, "abortController", void 0);
     (0, _defineProperty2.default)(this, "syncState", null);
     (0, _defineProperty2.default)(this, "syncStateData", void 0);
+    // additional data (eg. error object for failed sync)
     (0, _defineProperty2.default)(this, "catchingUp", false);
     (0, _defineProperty2.default)(this, "running", false);
     (0, _defineProperty2.default)(this, "keepAliveTimer", void 0);
     (0, _defineProperty2.default)(this, "connectionReturnedDefer", void 0);
     (0, _defineProperty2.default)(this, "notifEvents", []);
+    // accumulator of sync events in the current sync response
     (0, _defineProperty2.default)(this, "failedSyncCount", 0);
+    // Number of consecutive failed /sync requests
     (0, _defineProperty2.default)(this, "storeIsInvalid", false);
     (0, _defineProperty2.default)(this, "getPushRules", async () => {
       try {
@@ -107565,13 +107764,18 @@ class SyncApi {
         await this.recoverFromSyncStartupError(this.savedSyncPromise, err);
         return this.getFilter(); // try again
       }
-
       return {
         filter,
         filterId
       };
     });
     (0, _defineProperty2.default)(this, "savedSyncPromise", void 0);
+    /**
+     * Event handler for the 'online' event
+     * This event is generally unreliable and precise behaviour
+     * varies between browsers, so we poll for connectivity too,
+     * but this might help us reconnect a little faster.
+     */
     (0, _defineProperty2.default)(this, "onOnline", () => {
       debuglog("Browser thinks we are back online");
       this.startKeepAlives(0);
@@ -108210,12 +108414,10 @@ class SyncApi {
       this.updateSyncState(SyncState.Stopped);
       return true; // abort
     }
-
     _logger.logger.error("/sync error %s", err);
     if (this.shouldAbortSync(err)) {
       return true; // abort
     }
-
     this.failedSyncCount++;
     _logger.logger.log("Number of consecutive failed sync requests:", this.failedSyncCount);
     debuglog("Starting keep-alive");
@@ -108907,13 +109109,6 @@ class SyncApi {
     this.syncStateData = data;
     this.client.emit(_client.ClientEvent.Sync, this.syncState, old, data);
   }
-
-  /**
-   * Event handler for the 'online' event
-   * This event is generally unreliable and precise behaviour
-   * varies between browsers, so we poll for connectivity too,
-   * but this might help us reconnect a little faster.
-   */
 }
 exports.SyncApi = SyncApi;
 function createNewUser(client, userId) {
@@ -113736,7 +113931,7 @@ module.exports = JSON.parse("{\"name\":\"axios\",\"version\":\"0.21.4\",\"descri
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/editedplugins/vue-page-transition/src/components/VuePageTransition.vue?vue&type=template&id=a8099538&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/editedplugins/vue-page-transition/src/components/VuePageTransition.vue?vue&type=template&id=a8099538&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -114345,7 +114540,23 @@ var _utils = __webpack_require__("b83f");
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015 - 2021, 2023 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/ /**
+ * Defines m.olm encryption/decryption
+ */
 // determine whether the key can be shared with invitees
 function isRoomSharedHistory(room) {
   var _room$currentState, _visibilityEvent$getC;
@@ -114362,12 +114573,6 @@ function isRoomSharedHistory(room) {
  * @internal
  */
 class OutboundSessionInfo {
-  /** number of times this session has been used */
-
-  /** when the session was created (ms since the epoch) */
-
-  /** devices with which we have shared the session key `userId -> {deviceId -> SharedWithData}` */
-
   /**
    * @param sharedHistory - whether the session can be freely shared with
    *    other group members, according to the room history visibility settings
@@ -114375,8 +114580,11 @@ class OutboundSessionInfo {
   constructor(sessionId, sharedHistory = false) {
     this.sessionId = sessionId;
     this.sharedHistory = sharedHistory;
+    /** number of times this session has been used */
     (0, _defineProperty2.default)(this, "useCount", 0);
+    /** when the session was created (ms since the epoch) */
     (0, _defineProperty2.default)(this, "creationTime", void 0);
+    /** devices with which we have shared the session key `userId -> {deviceId -> SharedWithData}` */
     (0, _defineProperty2.default)(this, "sharedWithDevices", {});
     (0, _defineProperty2.default)(this, "blockedDevicesNotified", {});
     this.creationTime = new Date().getTime();
@@ -114448,20 +114656,18 @@ class OutboundSessionInfo {
  * @param params - parameters, as per {@link EncryptionAlgorithm}
  */
 class MegolmEncryption extends _base.EncryptionAlgorithm {
-  // the most recent attempt to set up a session. This is used to serialise
-  // the session setups, so that we have a race-free view of which session we
-  // are using, and which devices we have shared the keys with. It resolves
-  // with an OutboundSessionInfo (or undefined, for the first message in the
-  // room).
-
-  // Map of outbound sessions by sessions ID. Used if we need a particular
-  // session (the session we're currently using to send is always obtained
-  // using setupPromise).
-
   constructor(params) {
     var _params$config$rotati, _params$config, _params$config$rotati2, _params$config2;
     super(params);
+    // the most recent attempt to set up a session. This is used to serialise
+    // the session setups, so that we have a race-free view of which session we
+    // are using, and which devices we have shared the keys with. It resolves
+    // with an OutboundSessionInfo (or undefined, for the first message in the
+    // room).
     (0, _defineProperty2.default)(this, "setupPromise", Promise.resolve(null));
+    // Map of outbound sessions by sessions ID. Used if we need a particular
+    // session (the session we're currently using to send is always obtained
+    // using setupPromise).
     (0, _defineProperty2.default)(this, "outboundSessions", {});
     (0, _defineProperty2.default)(this, "sessionRotationPeriodMsgs", void 0);
     (0, _defineProperty2.default)(this, "sessionRotationPeriodMs", void 0);
@@ -115292,15 +115498,13 @@ class MegolmEncryption extends _base.EncryptionAlgorithm {
  */
 exports.MegolmEncryption = MegolmEncryption;
 class MegolmDecryption extends _base.DecryptionAlgorithm {
-  // events which we couldn't decrypt due to unknown sessions /
-  // indexes, or which we could only decrypt with untrusted keys:
-  // map from senderKey|sessionId to Set of MatrixEvents
-
-  // this gets stubbed out by the unit tests.
-
   constructor(params) {
     super(params);
+    // events which we couldn't decrypt due to unknown sessions /
+    // indexes, or which we could only decrypt with untrusted keys:
+    // map from senderKey|sessionId to Set of MatrixEvents
     (0, _defineProperty2.default)(this, "pendingEvents", new Map());
+    // this gets stubbed out by the unit tests.
     (0, _defineProperty2.default)(this, "olmlib", olmlib);
     (0, _defineProperty2.default)(this, "roomId", void 0);
     (0, _defineProperty2.default)(this, "prefixedLogger", void 0);
@@ -115661,7 +115865,6 @@ class MegolmDecryption extends _base.DecryptionAlgorithm {
     // TODO: ratchet index
     );
   }
-
   shareKeysWithDevice(keyRequest) {
     const userId = keyRequest.userId;
     const deviceId = keyRequest.deviceId;
@@ -118707,7 +118910,7 @@ var addStylesShadow = __webpack_require__("35d6");
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__("2877");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=5e30a43a&shadow
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=5e30a43a&shadow
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -118918,7 +119121,7 @@ var es_array_push = __webpack_require__("14d9");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.reduce.js
 var es_array_reduce = __webpack_require__("13d5");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/main/index.vue?vue&type=template&id=c291a1ac&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/main/index.vue?vue&type=template&id=c291a1ac&scoped=true
 var mainvue_type_template_id_c291a1ac_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -118947,7 +119150,7 @@ var mainvue_type_template_id_c291a1ac_scoped_true_staticRenderFns = [];
 
 // CONCATENATED MODULE: ./src/components/main/index.vue?vue&type=template&id=c291a1ac&scoped=true
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/layouts/footerChat/index.vue?vue&type=template&id=3bd2d533&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/layouts/footerChat/index.vue?vue&type=template&id=3bd2d533&scoped=true
 var footerChatvue_type_template_id_3bd2d533_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -119071,7 +119274,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var footerChat = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/gallery/index.vue?vue&type=template&id=5b42976d
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/gallery/index.vue?vue&type=template&id=5b42976d
 var galleryvue_type_template_id_5b42976d_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -119238,7 +119441,7 @@ var main_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var main = (main_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user/unauthorized/index.vue?vue&type=template&id=7999c80f&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user/unauthorized/index.vue?vue&type=template&id=7999c80f&scoped=true
 var unauthorizedvue_type_template_id_7999c80f_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -120068,6 +120271,9 @@ var store = new vuex_esm["a" /* default */].Store({
       commit("SET_CHATS_TO_STORE", chats);
       return store._vm.core.mtrx.kit.allchatmembers(m_chats).then(r => {
         commit("SET_CHATS_USERS", store._vm.core.mtrx.kit.usersFromChats(m_chats));
+
+        //return Promise.resolve()
+
         return store._vm.core.mtrx.kit.fillContacts(m_chats);
       });
     },
@@ -123319,7 +123525,7 @@ const router = new VueRouter$1({
   }*/
 });
 /* harmony default export */ var router_router = (router);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/modal/index.vue?vue&type=template&id=62118748
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/modal/index.vue?vue&type=template&id=62118748
 var modalvue_type_template_id_62118748_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -123535,7 +123741,7 @@ var modal_component = Object(componentNormalizer["a" /* default */])(
 // EXTERNAL MODULE: ./src/components/assets/pmenu/index.vue + 4 modules
 var pmenu = __webpack_require__("3441");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/swipable/index.vue?vue&type=template&id=0efbaa68&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/swipable/index.vue?vue&type=template&id=0efbaa68&scoped=true
 var swipablevue_type_template_id_0efbaa68_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -126344,7 +126550,7 @@ VueI18n.version = '8.28.2';
 
 /* harmony default export */ var vue_i18n_esm = (VueI18n);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/editedplugins/vue-m-message/src/message-template.vue?vue&type=template&id=7da7e992
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/editedplugins/vue-m-message/src/message-template.vue?vue&type=template&id=7da7e992
 var message_templatevue_type_template_id_7da7e992_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -126403,7 +126609,7 @@ var message_templatevue_type_template_id_7da7e992_staticRenderFns = [];
 
 // CONCATENATED MODULE: ./src/editedplugins/vue-m-message/src/message-template.vue?vue&type=template&id=7da7e992
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/editedplugins/vue-m-message/src/mmessage.vue?vue&type=template&id=6132718c
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/editedplugins/vue-m-message/src/mmessage.vue?vue&type=template&id=6132718c
 var mmessagevue_type_template_id_6132718c_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -126915,7 +127121,7 @@ var vue_js_toggle_button_dist_default = /*#__PURE__*/__webpack_require__.n(vue_j
 // EXTERNAL MODULE: ./src/components/events/event/index.vue + 14 modules
 var events_event = __webpack_require__("6167");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/list/index.vue?vue&type=template&id=286a0306&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/list/index.vue?vue&type=template&id=286a0306&scoped=true
 var listvue_type_template_id_286a0306_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -127047,7 +127253,7 @@ var list_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var list = (list_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/listmenu/index.vue?vue&type=template&id=2ac25190&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/listmenu/index.vue?vue&type=template&id=2ac25190&scoped=true
 var listmenuvue_type_template_id_2ac25190_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -127138,7 +127344,7 @@ var listmenu_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var listmenu = (listmenu_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/listmenuwithupload/index.vue?vue&type=template&id=6d0a1598&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/listmenuwithupload/index.vue?vue&type=template&id=6d0a1598&scoped=true
 var listmenuwithuploadvue_type_template_id_6d0a1598_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -127373,13 +127579,16 @@ class mtrxkit_MTRXKIT {
     return users;
   }
   prepareChat(m_chat) {
+    if (m_chat.getJoinRule() === "public") {
+      return Promise.resolve();
+    }
     return this.usersInfoForChatsStore([m_chat]).then(() => {
       return this.core.pcrypto.addroom(m_chat);
     });
   }
   fillContacts(m_chats) {
     m_chats = _.filter(m_chats, ch => {
-      return ch.selfMembership == "join" && ch.name.length == 57;
+      return ch.selfMembership == "join" && ch.name.length == 57 && ch.getJoinRule() === "public";
     });
     return this.usersInfoForChatsStore(m_chats).then(i => {
       this.core.store.commit("SET_CONTACTS_FROM_MATRIX", _.filter(i, m => {
@@ -131015,9 +131224,9 @@ class mtrx_MTRX {
       localStorage.accessToken = userData.access_token;
       var store = new sdk.IndexedDBStore({
         indexedDB: window.indexedDB,
-        dbName: "matrix-js-sdk-v4:" + _this3.credentials.username
+        dbName: "matrix-js-sdk-v5:" + _this3.credentials.username,
+        localStorage: window.localStorage
       });
-      yield store.startup();
       Object.assign(userClientData, {
         userId: userData.user_id,
         accessToken: userData.access_token,
@@ -131030,11 +131239,14 @@ class mtrx_MTRX {
       var userClient = _this3.createMtrxClient(userClientData);
       window.client = userClient;
       window.core = _this3.core;
+      yield store.startup();
       _this3.client = userClient;
       _this3.initEvents();
       yield userClient.startClient({
         pollTimeout: 60000,
-        resolveInvitesToProfiles: true
+        resolveInvitesToProfiles: true,
+        initialSyncLimit: 4,
+        disablePresence: true
       });
       _this3.access = userClientData;
       return userClient;
@@ -131193,6 +131405,9 @@ class mtrx_MTRX {
       this.core.store.dispatch("TYPING_EVENT", member);
     });
     this.client.on("sync", (state, prevState, res) => {
+      if (state === "PREPARED") {
+        console.log("PREPARED");
+      }
       this.setready();
       this.core.store.dispatch("FETCH_CHATS").then(r => {});
       this.core.store.dispatch("FETCH_EVENTS");
@@ -132291,7 +132506,7 @@ var pcrypto = __webpack_require__("9c21");
 // EXTERNAL MODULE: ./src/application/listeners.js
 var listeners = __webpack_require__("ebaa");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/chat/exported/index.vue?vue&type=template&id=ab8ff7b4
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/chat/exported/index.vue?vue&type=template&id=ab8ff7b4
 var exportedvue_type_template_id_ab8ff7b4_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -133618,7 +133833,7 @@ class application_Core {
 // EXTERNAL MODULE: ./node_modules/vue-virtual-scroller/dist/vue-virtual-scroller.esm.js
 var vue_virtual_scroller_esm = __webpack_require__("e508");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/preloader/index.vue?vue&type=template&id=64c94140&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/preloader/index.vue?vue&type=template&id=64c94140&scoped=true
 var preloadervue_type_template_id_64c94140_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -133702,7 +133917,7 @@ var preloader_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var preloader = (preloader_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/fixedmessageicon/index.vue?vue&type=template&id=1766477c&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/fixedmessageicon/index.vue?vue&type=template&id=1766477c&scoped=true
 var fixedmessageiconvue_type_template_id_1766477c_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -133811,7 +134026,7 @@ var fixedmessageicon_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var fixedmessageicon = (fixedmessageicon_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/date/index.vue?vue&type=template&id=6f7832dc&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/date/index.vue?vue&type=template&id=6f7832dc&scoped=true
 var datevue_type_template_id_6f7832dc_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -133872,7 +134087,7 @@ var date_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var assets_date = (date_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/userpic/index.vue?vue&type=template&id=36bbed8b&scoped=true&functional=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/userpic/index.vue?vue&type=template&id=36bbed8b&scoped=true&functional=true
 var userpicvue_type_template_id_36bbed8b_scoped_true_functional_true_render = function render(_c, _vm) {
   return _c('div', {
     staticClass: "userpic"
@@ -133942,7 +134157,7 @@ var userpic_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var userpic = (userpic_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/userspic/index.vue?vue&type=template&id=2d8181cb&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/userspic/index.vue?vue&type=template&id=2d8181cb&scoped=true
 var userspicvue_type_template_id_2d8181cb_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -134029,7 +134244,7 @@ var userspic_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var userspic = (userspic_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/bgimage.vue?vue&type=template&id=b55021d2&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/bgimage.vue?vue&type=template&id=b55021d2&scoped=true
 var bgimagevue_type_template_id_b55021d2_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -134119,7 +134334,7 @@ var bgimage_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var bgimage = (bgimage_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/logotype/index.vue?vue&type=template&id=40188122&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/logotype/index.vue?vue&type=template&id=40188122&scoped=true
 var logotypevue_type_template_id_40188122_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -134198,7 +134413,7 @@ var logotype_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var logotype = (logotype_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/dropdownMenu/index.vue?vue&type=template&id=7da73fce&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/dropdownMenu/index.vue?vue&type=template&id=7da73fce&scoped=true
 var dropdownMenuvue_type_template_id_7da73fce_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -134379,7 +134594,7 @@ var dropdownMenu_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var dropdownMenu = (dropdownMenu_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/backButton/index.vue?vue&type=template&id=c585ce68&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/backButton/index.vue?vue&type=template&id=c585ce68&scoped=true
 var backButtonvue_type_template_id_c585ce68_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -134453,7 +134668,7 @@ var backButton_component = Object(componentNormalizer["a" /* default */])(
 // EXTERNAL MODULE: ./src/components/assets/topheader/index.vue + 4 modules
 var topheader = __webpack_require__("08da");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/maincontent/index.vue?vue&type=template&id=60e6c210&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/maincontent/index.vue?vue&type=template&id=60e6c210&scoped=true
 var maincontentvue_type_template_id_60e6c210_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -134661,7 +134876,7 @@ var maincontent_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var maincontent = (maincontent_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/search/index.vue?vue&type=template&id=6a2059ba&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/search/index.vue?vue&type=template&id=6a2059ba&scoped=true
 var searchvue_type_template_id_6a2059ba_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -134901,7 +135116,7 @@ var search_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var search = (search_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/simpleSearch/index.vue?vue&type=template&id=b71aa9b2&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/simpleSearch/index.vue?vue&type=template&id=b71aa9b2&scoped=true
 var simpleSearchvue_type_template_id_b71aa9b2_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -134963,7 +135178,7 @@ var simpleSearchvue_type_template_id_b71aa9b2_scoped_true_staticRenderFns = [];
 
 // TODO IGOR' SEARCH ALL COMPONENTS
 /* harmony default export */ var simpleSearch_vue_type_script_lang_js_external = ({
-  name: 'search',
+  name: "search",
   props: {
     placeholder: String,
     minimize: {
@@ -134978,7 +135193,7 @@ var simpleSearchvue_type_template_id_b71aa9b2_scoped_true_staticRenderFns = [];
   data: function () {
     return {
       isTyping: false,
-      searchTxt: ''
+      searchTxt: ""
     };
   },
   created: () => {},
@@ -134986,7 +135201,7 @@ var simpleSearchvue_type_template_id_b71aa9b2_scoped_true_staticRenderFns = [];
     searchTxt: {
       handler: _.debounce(function () {
         var text = this.searchTxt;
-        this.$emit('search', text);
+        this.$emit("search", text);
       }, 500)
     },
     value: {
@@ -135009,25 +135224,25 @@ var simpleSearchvue_type_template_id_b71aa9b2_scoped_true_staticRenderFns = [];
       this.searchTxt = event.target.value;
     },
     clear: function (event) {
-      this.searchTxt = '';
+      this.searchTxt = "";
     },
     clickicon: function () {
-      this.$refs['input'].focus();
+      this.$refs["input"].focus();
     },
     blured: function () {},
     focused: function () {},
     focus: function () {
-      this.$refs['input'].focus();
+      this.$refs["input"].focus();
     },
     keydown(event) {
       var e = false;
       if (this.controlKeys) {
         if (event.keyCode === 40 || event.keyCode === 38) {
-          this.$emit('controlKey', event.keyCode === 40 ? 'down' : 'up');
+          this.$emit("controlKey", event.keyCode === 40 ? "down" : "up");
           e = true;
         }
         if (event.keyCode === 39 || event.keyCode === 13) {
-          this.$emit('controlKey', 'enter');
+          this.$emit("controlKey", "enter");
           e = true;
         }
       }
@@ -135037,7 +135252,7 @@ var simpleSearchvue_type_template_id_b71aa9b2_scoped_true_staticRenderFns = [];
       }
     },
     paste: function (evt) {
-      this.$emit('paste', evt);
+      this.$emit("paste", evt);
     },
     blured: function () {
       this.$store.commit("blockactive", {
@@ -135080,7 +135295,7 @@ var simpleSearch_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var simpleSearch = (simpleSearch_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/linepreloader/index.vue?vue&type=template&id=d10d1e22&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/linepreloader/index.vue?vue&type=template&id=d10d1e22&scoped=true
 var linepreloadervue_type_template_id_d10d1e22_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -137305,6 +137520,14 @@ const M_TOPIC = new _NamespacedValue.UnstableValue("m.topic", "org.matrix.msc376
 /**
  * The event content for an m.topic event (in content)
  */
+
+/**
+ * The event definition for an m.topic event (in content)
+ */
+
+/**
+ * The event content for an m.room.topic event
+ */
 exports.M_TOPIC = M_TOPIC;
 //# sourceMappingURL=topic.js.map
 
@@ -137661,7 +137884,7 @@ const ChatStorage = function (storageName, version, time) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/events/event/index.vue?vue&type=template&id=4c6b427c&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/events/event/index.vue?vue&type=template&id=663af0f2&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -137744,12 +137967,12 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/events/event/index.vue?vue&type=template&id=4c6b427c&scoped=true
+// CONCATENATED MODULE: ./src/components/events/event/index.vue?vue&type=template&id=663af0f2&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
 var asyncToGenerator = __webpack_require__("1da1");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/events/event/common/index.vue?vue&type=template&id=343d9312&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/events/event/common/index.vue?vue&type=template&id=343d9312&scoped=true
 var commonvue_type_template_id_343d9312_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -137814,7 +138037,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var common = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/events/event/member/index.vue?vue&type=template&id=3ddb1d8e&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/events/event/member/index.vue?vue&type=template&id=3ddb1d8e&scoped=true
 var membervue_type_template_id_3ddb1d8e_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -138097,25 +138320,27 @@ var rendered = {};
 
         //this.checkReaded();
         this.relations();
-        if (this.encryptedData || this.subtype == "m.encrypted") {
-          functions["a" /* default */].pretry(() => {
-            return this.chat.pcrypto;
-          }, 20, 10000).then(() => {
-            if (this.encryptedData && this.subtype == "m.image") {
-              this.decryptImage();
+        this.core.mtrx.kit.usersInfoById(this.event.getSender()).then(() => {
+          if (this.encryptedData || this.subtype == "m.encrypted") {
+            functions["a" /* default */].pretry(() => {
+              return this.chat.pcrypto;
+            }, 20, 10000).then(() => {
+              if (this.encryptedData && this.subtype == "m.image") {
+                this.decryptImage();
+              }
+              if (this.encryptedData && this.subtype == "m.audio") {
+                this.decryptAudio();
+              }
+              if (this.subtype == "m.encrypted") {
+                this.decrypt();
+              }
+            });
+          } else {
+            if (this.subtype == "m.audio") {
+              this.getAudioUnencrypt();
             }
-            if (this.encryptedData && this.subtype == "m.audio") {
-              this.decryptAudio();
-            }
-            if (this.subtype == "m.encrypted") {
-              this.decrypt();
-            }
-          });
-        } else {
-          if (this.subtype == "m.audio") {
-            this.getAudioUnencrypt();
           }
-        }
+        });
       }
     }
   },
@@ -138308,7 +138533,7 @@ var rendered = {};
 
 function event_injectStyles (context) {
   
-  var style0 = __webpack_require__("819e")
+  var style0 = __webpack_require__("f89f")
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -138321,7 +138546,7 @@ var event_component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   event_injectStyles,
-  "4c6b427c",
+  "663af0f2",
   null
   ,true
 )
@@ -138754,11 +138979,6 @@ const debuglog = DEBUG ? _logger.logger.log.bind(_logger.logger) : function () {
  */
 const DEFAULT_PAGINATE_LOOP_LIMIT = 5;
 class TimelineWindow {
-  // these will be TimelineIndex objects; they delineate the 'start' and
-  // 'end' of the window.
-  //
-  // start.index is inclusive; end.index is exclusive.
-
   /**
    * Construct a TimelineWindow.
    *
@@ -138783,6 +139003,10 @@ class TimelineWindow {
     this.client = client;
     this.timelineSet = timelineSet;
     (0, _defineProperty2.default)(this, "windowLimit", void 0);
+    // these will be TimelineIndex objects; they delineate the 'start' and
+    // 'end' of the window.
+    //
+    // start.index is inclusive; end.index is exclusive.
     (0, _defineProperty2.default)(this, "start", void 0);
     (0, _defineProperty2.default)(this, "end", void 0);
     (0, _defineProperty2.default)(this, "eventCount", 0);
@@ -139461,15 +139685,6 @@ exports.VerificationRequestEvent = VerificationRequestEvent;
  * send and receive verification events are put in `InRoomChannel` or `ToDeviceChannel`.
  */
 class VerificationRequest extends _typedEventEmitter.TypedEventEmitter {
-  // we keep a copy of the QR Code data (including other user master key) around
-  // for QR reciprocate verification, to protect against
-  // cross-signing identity reset between the .ready and .start event
-  // and signing the wrong key after .start
-
-  // The timestamp when we received the request event from the other side
-
-  // Used in tests only
-
   constructor(channel, verificationMethods, client) {
     super();
     this.channel = channel;
@@ -139484,11 +139699,17 @@ class VerificationRequest extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "verifierHasFinished", false);
     (0, _defineProperty2.default)(this, "_cancelled", false);
     (0, _defineProperty2.default)(this, "_chosenMethod", null);
+    // we keep a copy of the QR Code data (including other user master key) around
+    // for QR reciprocate verification, to protect against
+    // cross-signing identity reset between the .ready and .start event
+    // and signing the wrong key after .start
     (0, _defineProperty2.default)(this, "_qrCodeData", null);
+    // The timestamp when we received the request event from the other side
     (0, _defineProperty2.default)(this, "requestReceivedAt", null);
     (0, _defineProperty2.default)(this, "commonMethods", []);
     (0, _defineProperty2.default)(this, "_phase", void 0);
     (0, _defineProperty2.default)(this, "_cancellingUserId", void 0);
+    // Used in tests only
     (0, _defineProperty2.default)(this, "_verifier", void 0);
     (0, _defineProperty2.default)(this, "cancelOnTimeout", async () => {
       try {
@@ -141428,13 +141649,14 @@ limitations under the License.
  * Manages the list of encrypted rooms
  */
 
+/* eslint-disable camelcase */
+
 /* eslint-enable camelcase */
 
 class RoomList {
-  // Object of roomId -> room e2e info object (body of the m.room.encryption event)
-
   constructor(cryptoStore) {
     this.cryptoStore = cryptoStore;
+    // Object of roomId -> room e2e info object (body of the m.room.encryption event)
     (0, _defineProperty2.default)(this, "roomEncryption", {});
   }
   async init() {
@@ -141628,7 +141850,7 @@ exports.encrypt = function (self, chunk) {
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/upload/index.vue?vue&type=template&id=3fad2ed3&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/upload/index.vue?vue&type=template&id=3fad2ed3&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -141936,6 +142158,12 @@ limitations under the License.
 
 const DEBUG = false; // set true to enable console logging.
 
+/**
+ * The function to invoke to process (send) events in the queue.
+ * @param event - The event to send.
+ * @returns Resolved/rejected depending on the outcome of the request.
+ */
+
 // eslint-disable-next-line camelcase
 class MatrixScheduler {
   /**
@@ -141969,7 +142197,6 @@ class MatrixScheduler {
     if (attempts > 4) {
       return -1; // give up
     }
-
     return 1000 * Math.pow(2, attempts);
   }
 
@@ -145715,15 +145942,30 @@ var _typedEventEmitter = __webpack_require__("936a");
 var _groupCall = __webpack_require__("3838");
 var _logger = __webpack_require__("5b5f");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015, 2016 OpenMarket Ltd
+Copyright 2017 New Vector Ltd
+Copyright 2019, 2020 The Matrix.org Foundation C.I.C.
+Copyright 2021 - 2022 Šimon Brandner <simon.bra.ag@gmail.com>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 let MediaHandlerEvent;
 exports.MediaHandlerEvent = MediaHandlerEvent;
 (function (MediaHandlerEvent) {
   MediaHandlerEvent["LocalStreamsChanged"] = "local_streams_changed";
 })(MediaHandlerEvent || (exports.MediaHandlerEvent = MediaHandlerEvent = {}));
 class MediaHandler extends _typedEventEmitter.TypedEventEmitter {
-  // Promise chain to serialise calls to getMediaStream
-
   constructor(client) {
     super();
     this.client = client;
@@ -145733,6 +145975,7 @@ class MediaHandler extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "localUserMediaStream", void 0);
     (0, _defineProperty2.default)(this, "userMediaStreams", []);
     (0, _defineProperty2.default)(this, "screensharingStreams", []);
+    // Promise chain to serialise calls to getMediaStream
     (0, _defineProperty2.default)(this, "getMediaStreamPromise", void 0);
   }
   restoreMediaSettings(audioInput, videoInput) {
@@ -146760,7 +147003,23 @@ var _anotherJson = _interopRequireDefault(__webpack_require__("d190"));
 var _logger = __webpack_require__("5b5f");
 var _event = __webpack_require__("60af");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2016 - 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/ /**
+ * Utilities common to olm encryption algorithms
+ */
 var Algorithm;
 /**
  * matrix algorithm tag for olm
@@ -147426,6 +147685,7 @@ limitations under the License.
 class StubStore {
   constructor() {
     (0, _defineProperty2.default)(this, "accountData", {});
+    // stub
     (0, _defineProperty2.default)(this, "fromToken", null);
   }
   /** @returns whether or not the database was newly created in this session. */
@@ -147727,6 +147987,59 @@ limitations under the License.
 const M_BEACON_INFO = new _NamespacedValue.UnstableValue("m.beacon_info", "org.matrix.msc3672.beacon_info");
 exports.M_BEACON_INFO = M_BEACON_INFO;
 const M_BEACON = new _NamespacedValue.UnstableValue("m.beacon", "org.matrix.msc3672.beacon");
+
+/**
+ * m.beacon_info Event example from the spec
+ * https://github.com/matrix-org/matrix-spec-proposals/pull/3672
+ * @example
+ * ```
+ * {
+ *   "type": "m.beacon_info",
+ *   "state_key": "@matthew:matrix.org",
+ *   "content": {
+ *     "m.beacon_info": {
+ *       "description": "The Matthew Tracker", // same as an `m.location` description
+ *       "timeout": 86400000, // how long from the last event until we consider the beacon inactive in milliseconds
+ *     },
+ *     "m.ts": 1436829458432, // creation timestamp of the beacon on the client
+ *     "m.asset": {
+ *       "type": "m.self" // the type of asset being tracked as per MSC3488
+ *     }
+ *   }
+ * }
+ * ```
+ */
+
+/**
+ * m.beacon_info.* event content
+ */
+
+/**
+ * m.beacon event example
+ * https://github.com/matrix-org/matrix-spec-proposals/pull/3672
+ * @example
+ * ```
+ * {
+ *   "type": "m.beacon",
+ *   "sender": "@matthew:matrix.org",
+ *   "content": {
+ *       "m.relates_to": { // from MSC2674: https://github.com/matrix-org/matrix-doc/pull/2674
+ *           "rel_type": "m.reference", // from MSC3267: https://github.com/matrix-org/matrix-doc/pull/3267
+ *           "event_id": "$beacon_info"
+ *       },
+ *       "m.location": {
+ *           "uri": "geo:51.5008,0.1247;u=35",
+ *           "description": "Arbitrary beacon information"
+ *       },
+ *       "m.ts": 1636829458432,
+ *   }
+ * }
+ * ```
+ */
+
+/**
+ * Content of an m.beacon event
+ */
 exports.M_BEACON = M_BEACON;
 //# sourceMappingURL=beacon.js.map
 
@@ -147814,13 +148127,17 @@ limitations under the License.
 const KEY_BACKUP_KEYS_PER_REQUEST = 200;
 const KEY_BACKUP_CHECK_RATE_LIMIT = 5000; // ms
 
+/* eslint-disable camelcase */
+
+/* eslint-enable camelcase */
+
+/** A function used to get the secret key for a backup.
+ */
+
 /**
  * Manages the key backup.
  */
 class BackupManager {
-  // The info dict from /room_keys/version
-  // Have we checked the server for a backup we can use?
-  // Are we currently sending backups?
   // When did we last try to check the server for a given session id?
 
   constructor(baseApis, getKey) {
@@ -147828,8 +148145,11 @@ class BackupManager {
     this.getKey = getKey;
     (0, _defineProperty2.default)(this, "algorithm", void 0);
     (0, _defineProperty2.default)(this, "backupInfo", void 0);
+    // The info dict from /room_keys/version
     (0, _defineProperty2.default)(this, "checkedForBackup", void 0);
+    // Have we checked the server for a backup we can use?
     (0, _defineProperty2.default)(this, "sendingBackups", void 0);
+    // Are we currently sending backups?
     (0, _defineProperty2.default)(this, "sessionLastCheckAttemptedTime", {});
     this.checkedForBackup = false;
     this.sendingBackups = false;
@@ -156109,10 +156429,15 @@ const ReceiptPairSyntheticIndex = 1;
 class ReadReceipt extends _typedEventEmitter.TypedEventEmitter {
   constructor(...args) {
     super(...args);
+    // receipts should clobber based on receipt_type and user_id pairs hence
+    // the form of this structure. This is sub-optimal for the exposed APIs
+    // which pass in an event ID and get back some receipts, so we also store
+    // a pre-cached list for this purpose.
     (0, _defineProperty2.default)(this, "receipts", {});
+    // { receipt_type: { user_id: Receipt } }
     (0, _defineProperty2.default)(this, "receiptCacheByEventId", {});
     (0, _defineProperty2.default)(this, "timeline", void 0);
-  }
+  } // { event_id: CachedReceipt[] }
   /**
    * Gets the latest receipt for a given user in the room
    * @param userId - The id of the user for which we want the receipt
@@ -160657,18 +160982,6 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "819e":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c6b427c_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("9bcd");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c6b427c_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c6b427c_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c6b427c_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c6b427c_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
 /***/ "81d1":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -161621,6 +161934,20 @@ module.exports = function xor (a, b) {
 
 /***/ }),
 
+/***/ "83dd":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".deletedMessage[data-v-663af0f2]{font-size:.8em;text-align:center;opacity:.6;padding:1em}.event[data-v-663af0f2]{opacity:0;transition:.3s}.event.readyToRender[data-v-663af0f2]{opacity:1}.event .loading[data-v-663af0f2]{width:100%;height:100%;text-align:center}.event .deletedMessage[data-v-663af0f2],.event .loading[data-v-663af0f2]{position:relative;left:0;top:0;padding:.5em}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "848b":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -162126,7 +162453,21 @@ var _beacon2 = __webpack_require__("76e6");
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015 - 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 // possible statuses for out-of-band member loading
 var OobStatus;
 (function (OobStatus) {
@@ -162145,26 +162486,6 @@ exports.RoomStateEvent = RoomStateEvent;
   RoomStateEvent["Marker"] = "RoomState.Marker";
 })(RoomStateEvent || (exports.RoomStateEvent = RoomStateEvent = {}));
 class RoomState extends _typedEventEmitter.TypedEventEmitter {
-  // userId: RoomMember
-  // stores fuzzy matches to a list of userIDs (applies utils.removeHiddenChars to keys)
-
-  // 3pid invite state_key to m.room.member invite
-  // cache of the number of joined members
-  // joined members count from summary api
-  // once set, we know the server supports the summary api
-  // and we should only trust that
-  // we could also only trust that before OOB members
-  // are loaded but doesn't seem worth the hassle atm
-
-  // same for invited member count
-
-  // XXX: Should be read-only
-  // The room member dictionary, keyed on the user's ID.
-  // userId: RoomMember
-  // The state events dictionary, keyed on the event type and then the state_key value.
-  // Map<eventType, Map<stateKey, MatrixEvent>>
-  // The pagination token for this state.
-
   /**
    * Construct room state.
    *
@@ -162201,16 +162522,32 @@ class RoomState extends _typedEventEmitter.TypedEventEmitter {
     this.oobMemberFlags = oobMemberFlags;
     (0, _defineProperty2.default)(this, "reEmitter", new _ReEmitter.TypedReEmitter(this));
     (0, _defineProperty2.default)(this, "sentinels", {});
+    // userId: RoomMember
+    // stores fuzzy matches to a list of userIDs (applies utils.removeHiddenChars to keys)
     (0, _defineProperty2.default)(this, "displayNameToUserIds", new Map());
     (0, _defineProperty2.default)(this, "userIdsToDisplayNames", {});
     (0, _defineProperty2.default)(this, "tokenToInvite", {});
+    // 3pid invite state_key to m.room.member invite
     (0, _defineProperty2.default)(this, "joinedMemberCount", null);
+    // cache of the number of joined members
+    // joined members count from summary api
+    // once set, we know the server supports the summary api
+    // and we should only trust that
+    // we could also only trust that before OOB members
+    // are loaded but doesn't seem worth the hassle atm
     (0, _defineProperty2.default)(this, "summaryJoinedMemberCount", null);
+    // same for invited member count
     (0, _defineProperty2.default)(this, "invitedMemberCount", null);
     (0, _defineProperty2.default)(this, "summaryInvitedMemberCount", null);
     (0, _defineProperty2.default)(this, "modified", -1);
+    // XXX: Should be read-only
+    // The room member dictionary, keyed on the user's ID.
     (0, _defineProperty2.default)(this, "members", {});
+    // userId: RoomMember
+    // The state events dictionary, keyed on the event type and then the state_key value.
     (0, _defineProperty2.default)(this, "events", new Map());
+    // Map<eventType, Map<stateKey, MatrixEvent>>
+    // The pagination token for this state.
     (0, _defineProperty2.default)(this, "paginationToken", null);
     (0, _defineProperty2.default)(this, "beacons", new Map());
     (0, _defineProperty2.default)(this, "_liveBeaconIds", []);
@@ -163066,18 +163403,36 @@ class IndexedDBStore extends _memory.MemoryStore {
     (0, _defineProperty2.default)(this, "backend", void 0);
     (0, _defineProperty2.default)(this, "startedUp", false);
     (0, _defineProperty2.default)(this, "syncTs", 0);
+    // Records the last-modified-time of each user at the last point we saved
+    // the database, such that we can derive the set if users that have been
+    // modified since we last saved.
     (0, _defineProperty2.default)(this, "userModifiedMap", {});
+    // user_id : timestamp
     (0, _defineProperty2.default)(this, "emitter", new _typedEventEmitter.TypedEventEmitter());
     (0, _defineProperty2.default)(this, "on", this.emitter.on.bind(this.emitter));
+    /**
+     * @returns Promise which resolves with a sync response to restore the
+     * client state to where it was at the last save, or null if there
+     * is no saved sync data.
+     */
     (0, _defineProperty2.default)(this, "getSavedSync", this.degradable(() => {
       return this.backend.getSavedSync();
     }, "getSavedSync"));
+    /** @returns whether or not the database was newly created in this session. */
     (0, _defineProperty2.default)(this, "isNewlyCreated", this.degradable(() => {
       return this.backend.isNewlyCreated();
     }, "isNewlyCreated"));
+    /**
+     * @returns If there is a saved sync, the nextBatch token
+     * for this sync, otherwise null.
+     */
     (0, _defineProperty2.default)(this, "getSavedSyncToken", this.degradable(() => {
       return this.backend.getNextBatchToken();
     }, "getSavedSyncToken"));
+    /**
+     * Delete all data from this store.
+     * @returns Promise which resolves if the data was deleted from the database.
+     */
     (0, _defineProperty2.default)(this, "deleteAllData", this.degradable(() => {
       super.deleteAllData();
       return this.backend.clearDatabase().then(() => {
@@ -163106,9 +163461,22 @@ class IndexedDBStore extends _memory.MemoryStore {
     (0, _defineProperty2.default)(this, "setSyncData", this.degradable(syncData => {
       return this.backend.setSyncData(syncData);
     }, "setSyncData"));
+    /**
+     * Returns the out-of-band membership events for this room that
+     * were previously loaded.
+     * @returns the events, potentially an empty array if OOB loading didn't yield any new members
+     * @returns in case the members for this room haven't been stored yet
+     */
     (0, _defineProperty2.default)(this, "getOutOfBandMembers", this.degradable(roomId => {
       return this.backend.getOutOfBandMembers(roomId);
     }, "getOutOfBandMembers"));
+    /**
+     * Stores the out-of-band membership events for this room. Note that
+     * it still makes sense to store an empty array as the OOB status for the room is
+     * marked as fetched, and getOutOfBandMembers will return an empty array instead of null
+     * @param membershipEvents - the membership events to store
+     * @returns when all members have been stored
+     */
     (0, _defineProperty2.default)(this, "setOutOfBandMembers", this.degradable((roomId, membershipEvents) => {
       super.setOutOfBandMembers(roomId, membershipEvents);
       return this.backend.setOutOfBandMembers(roomId, membershipEvents);
@@ -163157,13 +163525,6 @@ class IndexedDBStore extends _memory.MemoryStore {
       });
     });
   }
-
-  /**
-   * @returns Promise which resolves with a sync response to restore the
-   * client state to where it was at the last save, or null if there
-   * is no saved sync data.
-   */
-
   /**
    * Whether this store would like to save its data
    * Note that obviously whether the store wants to save or
@@ -163467,6 +163828,8 @@ const DEFAULT_BITSIZE = 256;
 
 /* eslint-disable camelcase */
 
+/* eslint-enable camelcase */
+
 function keyFromAuthData(authData, password) {
   if (!global.Olm) {
     throw new Error("Olm is not available");
@@ -163767,7 +164130,6 @@ const DB_MIGRATIONS = [db => {
 }
 // Expand as needed.
 ];
-
 const VERSION = DB_MIGRATIONS.length;
 
 /**
@@ -163794,7 +164156,6 @@ function selectQuery(store, keyRange, resultMapper) {
         resolve(results);
         return; // end of results
       }
-
       results.push(resultMapper(cursor));
       cursor.continue();
     };
@@ -164123,7 +164484,6 @@ class LocalIndexedDBStoreBackend {
       for (const event of accountData) {
         store.put(event); // put == UPSERT
       }
-
       return txnAsPromise(txn).then();
     });
   }
@@ -164146,7 +164506,6 @@ class LocalIndexedDBStoreBackend {
           event: tuple[1]
         }); // put == UPSERT
       }
-
       return txnAsPromise(txn).then();
     });
   }
@@ -165218,7 +165577,6 @@ class RoomWidgetClient extends _client.MatrixClient {
     super.stopClient();
     this.lifecycle.abort(); // Signal to other async tasks that the client has stopped
   }
-
   async joinRoom(roomIdOrAlias) {
     if (roomIdOrAlias === this.roomId) return this.room;
     throw new Error(`Unknown room: ${roomIdOrAlias}`);
@@ -165700,11 +166058,6 @@ limitations under the License.
 */
 
 class RemoteIndexedDBStoreBackend {
-  // The currently in-flight requests to the actual backend
-  // seq: promise
-  // Once we start connecting, we keep the promise and re-use it
-  // if we try to connect again
-
   /**
    * An IndexedDB store backend where the actual backend sits in a web
    * worker.
@@ -165720,7 +166073,11 @@ class RemoteIndexedDBStoreBackend {
     this.dbName = dbName;
     (0, _defineProperty2.default)(this, "worker", void 0);
     (0, _defineProperty2.default)(this, "nextSeq", 0);
+    // The currently in-flight requests to the actual backend
     (0, _defineProperty2.default)(this, "inFlight", {});
+    // seq: promise
+    // Once we start connecting, we keep the promise and re-use it
+    // if we try to connect again
     (0, _defineProperty2.default)(this, "startPromise", void 0);
     (0, _defineProperty2.default)(this, "onWorkerMessage", ev => {
       const msg = ev.data;
@@ -166770,7 +167127,21 @@ var _logger = __webpack_require__("5b5f");
 var _typedEventEmitter = __webpack_require__("936a");
 var _utils = __webpack_require__("b83f");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2022 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 // /sync requests allow you to set a timeout= but the request may continue
 // beyond that and wedge forever, so we need to track how long we are willing
 // to keep open the connection. This constant is *ADDED* to the timeout= value
@@ -166785,6 +167156,22 @@ const MSC3575_STATE_KEY_LAZY = "$LAZY";
 /**
  * Represents a subscription to a room or set of rooms. Controls which events are returned.
  */
+
+/**
+ * Controls which rooms are returned in a given list.
+ */
+
+/**
+ * Represents a list subscription.
+ */
+
+/**
+ * A complete Sliding Sync request.
+ */
+
+/**
+ * A complete Sliding Sync response
+ */
 exports.MSC3575_STATE_KEY_LAZY = MSC3575_STATE_KEY_LAZY;
 let SlidingSyncState;
 /**
@@ -166797,8 +167184,6 @@ exports.SlidingSyncState = SlidingSyncState;
   SlidingSyncState["Complete"] = "COMPLETE";
 })(SlidingSyncState || (exports.SlidingSyncState = SlidingSyncState = {}));
 class SlidingList {
-  // returned data
-
   /**
    * Construct a new sliding list.
    * @param list - The range, sort and filter values to use for this list.
@@ -166806,6 +167191,7 @@ class SlidingList {
   constructor(list) {
     (0, _defineProperty2.default)(this, "list", void 0);
     (0, _defineProperty2.default)(this, "isModified", void 0);
+    // returned data
     (0, _defineProperty2.default)(this, "roomIndexToRoomId", {});
     (0, _defineProperty2.default)(this, "joinedCount", 0);
     this.replaceList(list);
@@ -166923,21 +167309,6 @@ exports.SlidingSyncEvent = SlidingSyncEvent;
  * To hook this up with the JS SDK, you need to use SlidingSyncSdk.
  */
 class SlidingSync extends _typedEventEmitter.TypedEventEmitter {
-  // flag set when resend() is called because we cannot rely on detecting AbortError in JS SDK :(
-
-  // the txn_id to send with the next request.
-
-  // a list (in chronological order of when they were sent) of objects containing the txn ID and
-  // a defer to resolve/reject depending on whether they were successfully sent or not.
-
-  // map of extension name to req/resp handler
-
-  // the *desired* room subscriptions
-
-  // map of custom subscription name to the subscription
-
-  // map of room ID to custom subscription name
-
   /**
    * Create a new sliding sync instance
    * @param proxyBaseUrl - The base URL of the sliding sync proxy
@@ -166955,13 +167326,21 @@ class SlidingSync extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "lists", void 0);
     (0, _defineProperty2.default)(this, "listModifiedCount", 0);
     (0, _defineProperty2.default)(this, "terminated", false);
+    // flag set when resend() is called because we cannot rely on detecting AbortError in JS SDK :(
     (0, _defineProperty2.default)(this, "needsResend", false);
+    // the txn_id to send with the next request.
     (0, _defineProperty2.default)(this, "txnId", null);
+    // a list (in chronological order of when they were sent) of objects containing the txn ID and
+    // a defer to resolve/reject depending on whether they were successfully sent or not.
     (0, _defineProperty2.default)(this, "txnIdDefers", []);
+    // map of extension name to req/resp handler
     (0, _defineProperty2.default)(this, "extensions", {});
     (0, _defineProperty2.default)(this, "desiredRoomSubscriptions", new Set());
+    // the *desired* room subscriptions
     (0, _defineProperty2.default)(this, "confirmedRoomSubscriptions", new Set());
+    // map of custom subscription name to the subscription
     (0, _defineProperty2.default)(this, "customSubscriptions", new Map());
+    // map of room ID to custom subscription name
     (0, _defineProperty2.default)(this, "roomIdToCustomSubscription", new Map());
     (0, _defineProperty2.default)(this, "pendingReq", void 0);
     (0, _defineProperty2.default)(this, "abortController", void 0);
@@ -167301,7 +167680,6 @@ class SlidingSync extends _typedEventEmitter.TypedEventEmitter {
               if (!roomId) {
                 break; // we are at the end of list
               }
-
               listData.roomIndexToRoomId[i] = roomId;
             }
             _logger.logger.debug("SYNC", listKey, op.range[0], op.range[1], (op.room_ids || []).join(" "), ";");
@@ -167491,7 +167869,6 @@ class SlidingSync extends _typedEventEmitter.TypedEventEmitter {
         } else if (this.needsResend || err.name === "AbortError") {
           continue; // don't sleep as we caused this error by abort()ing the request.
         }
-
         _logger.logger.error(err);
         await (0, _utils.sleep)(5000);
       }
@@ -167560,7 +167937,7 @@ module.exports.__inject__ = function (shadowRoot) {
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/contacts/preview/index.vue?vue&type=template&id=43f2d6ca&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/contacts/preview/index.vue?vue&type=template&id=43f2d6ca&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -167827,7 +168204,8 @@ exports.ConditionKind = ConditionKind;
   ConditionKind["SenderNotificationPermission"] = "sender_notification_permission";
   ConditionKind["CallStarted"] = "call_started";
   ConditionKind["CallStartedPrefix"] = "org.matrix.msc3914.call_started";
-})(ConditionKind || (exports.ConditionKind = ConditionKind = {}));
+})(ConditionKind || (exports.ConditionKind = ConditionKind = {})); // XXX: custom conditions are possible but always fail, and break the typescript discriminated union so ignore them here
+// IPushRuleCondition<Exclude<string, ConditionKind>> unfortunately does not resolve this at the time of writing.
 let PushRuleKind;
 exports.PushRuleKind = PushRuleKind;
 (function (PushRuleKind) {
@@ -168763,47 +169141,6 @@ exports.RoomMemberEvent = RoomMemberEvent;
   RoomMemberEvent["Typing"] = "RoomMember.typing";
 })(RoomMemberEvent || (exports.RoomMemberEvent = RoomMemberEvent = {}));
 class RoomMember extends _typedEventEmitter.TypedEventEmitter {
-  // used by sync.ts
-
-  // XXX these should be read-only
-  /**
-   * True if the room member is currently typing.
-   */
-
-  /**
-   * The human-readable name for this room member. This will be
-   * disambiguated with a suffix of " (\@user_id:matrix.org)" if another member shares the
-   * same displayname.
-   */
-
-  /**
-   * The ambiguous displayname of this room member.
-   */
-
-  /**
-   * The power level for this room member.
-   */
-
-  /**
-   * The normalised power level (0-100) for this room member.
-   */
-
-  /**
-   * The User object for this room member, if one exists.
-   */
-
-  /**
-   * The membership state for this room member e.g. 'join'.
-   */
-
-  /**
-   * True if the member's name is disambiguated.
-   */
-
-  /**
-   * The events describing this RoomMember.
-   */
-
   /**
    * Construct a new room member.
    *
@@ -168817,14 +169154,45 @@ class RoomMember extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "_isOutOfBand", false);
     (0, _defineProperty2.default)(this, "modified", -1);
     (0, _defineProperty2.default)(this, "requestedProfileInfo", false);
+    // used by sync.ts
+    // XXX these should be read-only
+    /**
+     * True if the room member is currently typing.
+     */
     (0, _defineProperty2.default)(this, "typing", false);
+    /**
+     * The human-readable name for this room member. This will be
+     * disambiguated with a suffix of " (\@user_id:matrix.org)" if another member shares the
+     * same displayname.
+     */
     (0, _defineProperty2.default)(this, "name", void 0);
+    /**
+     * The ambiguous displayname of this room member.
+     */
     (0, _defineProperty2.default)(this, "rawDisplayName", void 0);
+    /**
+     * The power level for this room member.
+     */
     (0, _defineProperty2.default)(this, "powerLevel", 0);
+    /**
+     * The normalised power level (0-100) for this room member.
+     */
     (0, _defineProperty2.default)(this, "powerLevelNorm", 0);
+    /**
+     * The User object for this room member, if one exists.
+     */
     (0, _defineProperty2.default)(this, "user", void 0);
+    /**
+     * The membership state for this room member e.g. 'join'.
+     */
     (0, _defineProperty2.default)(this, "membership", void 0);
+    /**
+     * True if the member's name is disambiguated.
+     */
     (0, _defineProperty2.default)(this, "disambiguate", false);
+    /**
+     * The events describing this RoomMember.
+     */
     (0, _defineProperty2.default)(this, "events", {});
     this.name = userId;
     this.rawDisplayName = userId;
@@ -169179,6 +169547,7 @@ var WidgetApiFromWidgetAction = /*#__PURE__*/function (WidgetApiFromWidgetAction
   WidgetApiFromWidgetAction["MSC3973UserDirectorySearch"] = "org.matrix.msc3973.user_directory_search";
   WidgetApiFromWidgetAction["MSC4039GetMediaConfigAction"] = "org.matrix.msc4039.get_media_config";
   WidgetApiFromWidgetAction["MSC4039UploadFileAction"] = "org.matrix.msc4039.upload_file";
+  WidgetApiFromWidgetAction["MSC4157UpdateDelayedEvent"] = "org.matrix.msc4157.update_delayed_event";
   return WidgetApiFromWidgetAction;
 }({});
 exports.WidgetApiFromWidgetAction = WidgetApiFromWidgetAction;
@@ -169201,6 +169570,21 @@ exports.setTextEncoder = setTextEncoder;
 exports.subtleCrypto = void 0;
 var _logger = __webpack_require__("5b5f");
 var _global$window, _global$window$crypto, _global$window2, _global$window2$crypt, _global$window3, _global$window3$crypt, _global$window4;
+/*
+Copyright 2022 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 let crypto = (_global$window = global.window) === null || _global$window === void 0 ? void 0 : _global$window.crypto;
 exports.crypto = crypto;
 let subtleCrypto = (_global$window$crypto = (_global$window2 = global.window) === null || _global$window2 === void 0 ? void 0 : (_global$window2$crypt = _global$window2.crypto) === null || _global$window2$crypt === void 0 ? void 0 : _global$window2$crypt.subtle) !== null && _global$window$crypto !== void 0 ? _global$window$crypto : (_global$window3 = global.window) === null || _global$window3 === void 0 ? void 0 : (_global$window3$crypt = _global$window3.crypto) === null || _global$window3$crypt === void 0 ? void 0 : _global$window3$crypt.webkitSubtle;
@@ -169705,24 +170089,6 @@ module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-
-/***/ }),
-
-/***/ "9bcd":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("ebed");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add CSS to Shadow Root
-var add = __webpack_require__("35d6").default
-module.exports.__inject__ = function (shadowRoot) {
-  add("407e096f", content, shadowRoot)
-};
 
 /***/ }),
 
@@ -171663,7 +172029,6 @@ class MatrixHttpApi extends _fetch.FetchHttpApi {
               if (xhr.status === 0) {
                 throw new DOMException(xhr.statusText, "AbortError"); // mimic fetch API
               }
-
               if (!xhr.responseText) {
                 throw new Error("No response body.");
               }
@@ -171870,12 +172235,6 @@ function publicKeyFromKeyInfo(keyInfo) {
   return Object.values(keyInfo.keys)[0];
 }
 class CrossSigningInfo {
-  // This tracks whether we've ever verified this user with any identity.
-  // When you verify a user, any devices online at the time that receive
-  // the verifying signature via the homeserver will latch this to true
-  // and can use it in the future to detect cases where the user has
-  // become unverified later for any reason.
-
   /**
    * Information about a user's cross-signing keys
    *
@@ -171890,6 +172249,11 @@ class CrossSigningInfo {
     this.cacheCallbacks = cacheCallbacks;
     (0, _defineProperty2.default)(this, "keys", {});
     (0, _defineProperty2.default)(this, "firstUse", true);
+    // This tracks whether we've ever verified this user with any identity.
+    // When you verify a user, any devices online at the time that receive
+    // the verifying signature via the homeserver will latch this to true
+    // and can use it in the future to detect cases where the user has
+    // become unverified later for any reason.
     (0, _defineProperty2.default)(this, "crossSigningVerifiedBefore", false);
   }
   static fromStorage(obj, userId) {
@@ -173039,7 +173403,6 @@ class IgnoredInvites {
         }
       }
     }
-
     return null;
   }
 
@@ -173289,7 +173652,21 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__("9523"));
 var _sync = __webpack_require__("886e");
 var _filterComponent = __webpack_require__("97e3");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015 - 2021 Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 /**
  */
 function setProp(obj, keyNesting, val) {
@@ -184858,7 +185235,21 @@ var _utilities = __webpack_require__("2370");
 var _location = __webpack_require__("cc89");
 var _topic = __webpack_require__("60b4");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2018 - 2022 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 /**
  * Generates the content for a HTML Message event
  * @param body - the plaintext body of the message
@@ -185723,28 +186114,6 @@ exports.TrackingStatus = TrackingStatus;
   TrackingStatus[TrackingStatus["UpToDate"] = 3] = "UpToDate";
 })(TrackingStatus || (exports.TrackingStatus = TrackingStatus = {}));
 class DeviceList extends _typedEventEmitter.TypedEventEmitter {
-  // map of identity keys to the user who owns it
-
-  // which users we are tracking device status for.
-  // loaded from storage in load()
-
-  // The 'next_batch' sync token at the point the data was written,
-  // ie. a token representing the point immediately after the
-  // moment represented by the snapshot in the db.
-
-  // Set whenever changes are made other than setting the sync token
-
-  // Promise resolved when device data is saved
-
-  // Function that resolves the save promise
-
-  // The time the save is scheduled for
-
-  // The timer used to delay the save
-
-  // True if we have fetched data from the server or loaded a non-empty
-  // set of device data from the store
-
   constructor(baseApis, cryptoStore, olmDevice,
   // Maximum number of user IDs per request to prevent server overload (#1619)
   keyDownloadChunkSize = 250) {
@@ -185753,15 +186122,28 @@ class DeviceList extends _typedEventEmitter.TypedEventEmitter {
     this.keyDownloadChunkSize = keyDownloadChunkSize;
     (0, _defineProperty2.default)(this, "devices", {});
     (0, _defineProperty2.default)(this, "crossSigningInfo", {});
+    // map of identity keys to the user who owns it
     (0, _defineProperty2.default)(this, "userByIdentityKey", {});
+    // which users we are tracking device status for.
     (0, _defineProperty2.default)(this, "deviceTrackingStatus", {});
+    // loaded from storage in load()
+    // The 'next_batch' sync token at the point the data was written,
+    // ie. a token representing the point immediately after the
+    // moment represented by the snapshot in the db.
     (0, _defineProperty2.default)(this, "syncToken", null);
     (0, _defineProperty2.default)(this, "keyDownloadsInProgressByUser", new Map());
+    // Set whenever changes are made other than setting the sync token
     (0, _defineProperty2.default)(this, "dirty", false);
+    // Promise resolved when device data is saved
     (0, _defineProperty2.default)(this, "savePromise", null);
+    // Function that resolves the save promise
     (0, _defineProperty2.default)(this, "resolveSavePromise", null);
+    // The time the save is scheduled for
     (0, _defineProperty2.default)(this, "savePromiseTime", null);
+    // The timer used to delay the save
     (0, _defineProperty2.default)(this, "saveTimer", null);
+    // True if we have fetched data from the server or loaded a non-empty
+    // set of device data from the store
     (0, _defineProperty2.default)(this, "hasFetched", null);
     (0, _defineProperty2.default)(this, "serialiser", void 0);
     this.serialiser = new DeviceListUpdateSerialiser(baseApis, olmDevice, this);
@@ -185835,7 +186217,6 @@ class DeviceList extends _typedEventEmitter.TypedEventEmitter {
       // (but keep the save promise since whatever called save before
       // will still want to know when the save is done)
     }
-
     let savePromise = this.savePromise;
     if (savePromise === null) {
       savePromise = new Promise(resolve => {
@@ -186287,12 +186668,6 @@ class DeviceList extends _typedEventEmitter.TypedEventEmitter {
  */
 exports.DeviceList = DeviceList;
 class DeviceListUpdateSerialiser {
-  // users which are queued for download
-  // userId -> true
-
-  // deferred which is resolved when the queued users are downloaded.
-  // non-null indicates that we have users queued for download.
-
   // The sync token we send with the requests
 
   /*
@@ -186305,7 +186680,11 @@ class DeviceListUpdateSerialiser {
     this.olmDevice = olmDevice;
     this.deviceList = deviceList;
     (0, _defineProperty2.default)(this, "downloadInProgress", false);
+    // users which are queued for download
+    // userId -> true
     (0, _defineProperty2.default)(this, "keyDownloadsQueuedByUser", {});
+    // deferred which is resolved when the queued users are downloaded.
+    // non-null indicates that we have users queued for download.
     (0, _defineProperty2.default)(this, "queuedQueryDeferred", void 0);
     (0, _defineProperty2.default)(this, "syncToken", void 0);
   }
@@ -186657,7 +187036,6 @@ class ExtensionE2EE {
       enabled: true // this is sticky so only send it on the initial request
     };
   }
-
   async onResponse(data) {
     // Handle device list updates
     if (data["device_lists"]) {
@@ -186815,7 +187193,6 @@ class ExtensionTyping {
     if (!isInitial) {
       return undefined; // don't send a JSON object for subsequent requests, we don't need to.
     }
-
     return {
       enabled: true
     };
@@ -186847,7 +187224,6 @@ class ExtensionReceipts {
     }
     return undefined; // don't send a JSON object for subsequent requests, we don't need to.
   }
-
   onResponse(data) {
     if (!(data !== null && data !== void 0 && data.rooms)) {
       return;
@@ -187079,7 +187455,6 @@ class SlidingSyncSdk {
           seenKnownEvent = true;
           continue; // don't include this event, it's a dupe
         }
-
         if (seenKnownEvent) {
           // old -> new
           oldEvents.push(recvEvent);
@@ -188688,6 +189063,8 @@ var MatrixCapabilities = /*#__PURE__*/function (MatrixCapabilities) {
   MatrixCapabilities["MSC3846TurnServers"] = "town.robin.msc3846.turn_servers";
   MatrixCapabilities["MSC3973UserDirectorySearch"] = "org.matrix.msc3973.user_directory_search";
   MatrixCapabilities["MSC4039UploadFile"] = "org.matrix.msc4039.upload_file";
+  MatrixCapabilities["MSC4157SendDelayedEvent"] = "org.matrix.msc4157.send.delayed_event";
+  MatrixCapabilities["MSC4157UpdateDelayedEvent"] = "org.matrix.msc4157.update_delayed_event";
   return MatrixCapabilities;
 }({});
 exports.MatrixCapabilities = MatrixCapabilities;
@@ -190257,7 +190634,23 @@ const _excluded = ["server", "limit", "since"];
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; } /*
+Copyright 2015-2022 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/ /**
+ * This is an internal module. See {@link MatrixClient} for the public class.
+ */
 const SCROLLBACK_DELAY_MS = 3000;
 const CRYPTO_ENABLED = (0, _crypto.isCryptoAvailable)();
 exports.CRYPTO_ENABLED = CRYPTO_ENABLED;
@@ -190278,6 +190671,7 @@ exports.RoomVersionStability = RoomVersionStability;
   RoomVersionStability["Stable"] = "stable";
   RoomVersionStability["Unstable"] = "unstable";
 })(RoomVersionStability || (exports.RoomVersionStability = RoomVersionStability = {}));
+/* eslint-disable camelcase */
 var CrossSigningKeyType;
 (function (CrossSigningKeyType) {
   CrossSigningKeyType["MasterKey"] = "master_key";
@@ -190317,33 +190711,12 @@ const SSO_ACTION_PARAM = new _NamespacedValue.UnstableValue("action", "org.matri
  * as it specifies 'sensible' defaults for these modules.
  */
 class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
-  // populated after initCrypto
-
-  // XXX: Intended private, used in code.
-  // libolm crypto implementation. XXX: Intended private, used in code. Being replaced by cryptoBackend
-  // one of crypto or rustCrypto
-  // XXX: Intended private, used in code.
-  // XXX: Intended private, used in code.
-
-  // XXX: Intended private, used in code.
-  // XXX: Intended private, used in code.
-  // XXX: Intended private, used in code.
-
-  // Note: these are all `protected` to let downstream consumers make mistakes if they want to.
-  // We don't technically support this usage, but have reasons to do this.
-
-  // The pushprocessor caches useful things, so keep one and re-use it
-
-  // Promise to a response of the server's /versions response
-  // TODO: This should expire: https://github.com/matrix-org/matrix-js-sdk/issues/1020
-
-  // A manager for determining which invites should be ignored.
-
   constructor(opts) {
     var _opts$usingExternalCr;
     super();
     (0, _defineProperty2.default)(this, "reEmitter", new _ReEmitter.TypedReEmitter(this));
     (0, _defineProperty2.default)(this, "olmVersion", null);
+    // populated after initCrypto
     (0, _defineProperty2.default)(this, "usingExternalCrypto", false);
     (0, _defineProperty2.default)(this, "store", void 0);
     (0, _defineProperty2.default)(this, "deviceId", void 0);
@@ -190355,16 +190728,26 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "urlPreviewCache", {});
     (0, _defineProperty2.default)(this, "identityServer", void 0);
     (0, _defineProperty2.default)(this, "http", void 0);
+    // XXX: Intended private, used in code.
     (0, _defineProperty2.default)(this, "crypto", void 0);
+    // libolm crypto implementation. XXX: Intended private, used in code. Being replaced by cryptoBackend
     (0, _defineProperty2.default)(this, "cryptoBackend", void 0);
+    // one of crypto or rustCrypto
     (0, _defineProperty2.default)(this, "cryptoCallbacks", void 0);
+    // XXX: Intended private, used in code.
     (0, _defineProperty2.default)(this, "callEventHandler", void 0);
+    // XXX: Intended private, used in code.
     (0, _defineProperty2.default)(this, "groupCallEventHandler", void 0);
     (0, _defineProperty2.default)(this, "supportsCallTransfer", false);
+    // XXX: Intended private, used in code.
     (0, _defineProperty2.default)(this, "forceTURN", false);
+    // XXX: Intended private, used in code.
     (0, _defineProperty2.default)(this, "iceCandidatePoolSize", 0);
+    // XXX: Intended private, used in code.
     (0, _defineProperty2.default)(this, "idBaseUrl", void 0);
     (0, _defineProperty2.default)(this, "baseUrl", void 0);
+    // Note: these are all `protected` to let downstream consumers make mistakes if they want to.
+    // We don't technically support this usage, but have reasons to do this.
     (0, _defineProperty2.default)(this, "canSupportVoip", false);
     (0, _defineProperty2.default)(this, "peekSync", null);
     (0, _defineProperty2.default)(this, "isGuestAccount", false);
@@ -190383,7 +190766,10 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "clientWellKnownIntervalID", void 0);
     (0, _defineProperty2.default)(this, "canResetTimelineCallback", void 0);
     (0, _defineProperty2.default)(this, "canSupport", new Map());
+    // The pushprocessor caches useful things, so keep one and re-use it
     (0, _defineProperty2.default)(this, "pushProcessor", new _pushprocessor.PushProcessor(this));
+    // Promise to a response of the server's /versions response
+    // TODO: This should expire: https://github.com/matrix-org/matrix-js-sdk/issues/1020
     (0, _defineProperty2.default)(this, "serverVersionsPromise", void 0);
     (0, _defineProperty2.default)(this, "cachedCapabilities", void 0);
     (0, _defineProperty2.default)(this, "clientWellKnown", void 0);
@@ -190398,6 +190784,7 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "pendingEventEncryption", new Map());
     (0, _defineProperty2.default)(this, "useE2eForGroupCall", true);
     (0, _defineProperty2.default)(this, "toDeviceMessageQueue", void 0);
+    // A manager for determining which invites should be ignored.
     (0, _defineProperty2.default)(this, "ignoredInvites", void 0);
     (0, _defineProperty2.default)(this, "startCallEventHandler", () => {
       if (this.isInitialSyncComplete()) {
@@ -192960,7 +193347,7 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
   setRoomRetention(roomId, content) {
     const path = utils.encodeUri("/rooms/$roomId/state/$type", {
       $roomId: roomId,
-      $type: 'm.room.retention'
+      $type: "m.room.retention"
     });
     return this.http.authedRequest(_httpApi.Method.Put, path, undefined, content);
   }
@@ -193491,7 +193878,6 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
     if (this.isGuest()) {
       return Promise.resolve({}); // guests cannot send receipts so don't bother.
     }
-
     const path = utils.encodeUri("/rooms/$roomId/receipt/$receiptType/$eventId", {
       $roomId: event.getRoomId(),
       $receiptType: receiptType,
@@ -193618,7 +194004,6 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
     if (this.isGuest()) {
       return Promise.resolve({}); // guests cannot send typing notifications so don't bother.
     }
-
     const path = utils.encodeUri("/rooms/$roomId/typing/$userId", {
       $roomId: roomId,
       $userId: this.getUserId()
@@ -195076,11 +195461,9 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
     if (this.syncedLeftRooms) {
       return Promise.resolve([]); // don't call syncRooms again if it succeeded.
     }
-
     if (this.syncLeftRoomsPromise) {
       return this.syncLeftRoomsPromise; // return the ongoing request
     }
-
     const syncApi = new _sync.SyncApi(this, this.clientOpts, this.buildSyncApiOptions());
     this.syncLeftRoomsPromise = syncApi.syncLeftRooms();
 
@@ -195091,7 +195474,6 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
     }).finally(() => {
       this.syncLeftRoomsPromise = undefined; // cleanup ongoing request state
     });
-
     return this.syncLeftRoomsPromise;
   }
 
@@ -195250,10 +195632,13 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
       const getStuns = () => {
         const list = ["relay1.expressturn.com:443", "relay2.expressturn.com:443", "relay3.expressturn.com:443", "relay1.expressturn.com:3478", "relay2.expressturn.com:3478", "relay4.expressturn.com:3478", "relay5.expressturn.com:3478", "relay6.expressturn.com:3478", "relay8.expressturn.com:3478", "relay1.expressturn.com:80", "stun.relay.metered.ca:80"];
         return list.map(server => ({
-          urls: ["stun:" + server],
+          urls: [`stun:${server}`],
           username: "",
           credential: ""
         }));
+      };
+      const getRandomServers = (servers, count) => {
+        return servers.sort(() => 0.5 - Math.random()).slice(0, count);
       };
       _logger.logger.debug("Fetching new TURN credentials");
       try {
@@ -195262,7 +195647,7 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
         //     logger.log("Got TURN URIs: " + res.uris + " refresh in " + res.ttl + " secs");
         // map the response to a format that can be fed to RTCPeerConnection
 
-        this.turnServers = [...getStuns(), ...getList1(), {
+        const allServers = [...getStuns(), ...getList1(), {
           urls: ["stun:stun.relay.metered.ca:80"],
           username: "",
           credential: ""
@@ -195275,6 +195660,8 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
           username: "",
           credential: ""
         }];
+        this.turnServers = getRandomServers(allServers, 3);
+
         // The TTL is in seconds but we work in ms
         this.turnServersExpiry = Date.now() + 1000000 * 1000;
         credentialsGood = true;
@@ -195294,7 +195681,6 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
         }
       }
     }
-
     return credentialsGood;
   }
 
@@ -195807,7 +196193,6 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
       auth: auth,
       refresh_token: true // always ask for a refresh token - does nothing if unsupported
     };
-
     if (username !== undefined && username !== null) {
       params.username = username;
     }
@@ -197257,7 +197642,6 @@ class MatrixClient extends _typedEventEmitter.TypedEventEmitter {
       // ts
       // signatures
     };
-
     return mapping;
   }
 
@@ -197677,6 +198061,7 @@ function fixNotificationCountOnDecryption(cli, event) {
       // highlight notifications at this stage.
       //
       // This issue can likely go away when MSC3874 is implemented
+
       true;
     } else {
       hasReadEvent = room.hasUserReadEvent(cli.getUserId(), event.getId());
@@ -198900,6 +199285,10 @@ class ToDeviceMessageQueue {
         this.sending = false;
       }
     });
+    /**
+     * Listen to sync state changes and automatically resend any pending events
+     * once syncing is resumed
+     */
     (0, _defineProperty2.default)(this, "onResumedSync", (state, oldState) => {
       if (state === _sync.SyncState.Syncing && oldState !== _sync.SyncState.Syncing) {
         _logger.logger.info(`Resuming queue after resumed sync`);
@@ -198947,11 +199336,6 @@ class ToDeviceMessageQueue {
     _logger.logger.info(`Sending batch of ${batch.batch.length} to-device messages with ID ${batch.id} and txnId ${batch.txnId}`);
     await this.client.sendToDevice(batch.eventType, contentMap, batch.txnId);
   }
-
-  /**
-   * Listen to sync state changes and automatically resend any pending events
-   * once syncing is resumed
-   */
 }
 exports.ToDeviceMessageQueue = ToDeviceMessageQueue;
 //# sourceMappingURL=ToDeviceMessageQueue.js.map
@@ -202010,7 +202394,6 @@ const emojiMapping = [["🐶", "dog"],
 // 62
 ["📌", "pin"] // 63
 ];
-
 function generateEmojiSas(sasBytes) {
   const emojis = [
   // just like base64 encoding
@@ -202494,7 +202877,23 @@ var _pRetry = _interopRequireDefault(__webpack_require__("3eed"));
 var _location = __webpack_require__("cc89");
 var _read_receipts = __webpack_require__("283b");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015, 2016, 2019, 2023 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/ /**
+ * This is an internal module.
+ */
 const interns = new Map();
 
 /**
@@ -207746,6 +208145,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+// Types and utilities for MSC1767: Extensible events (version 1) in Matrix
+
+/**
+ * Represents the stable and unstable values of a given namespace.
+ */
+
+/**
+ * Represents a namespaced value, if the value is a string. Used to extract provided types
+ * from a TSNamespace<N> (in cases where only stable *or* unstable is provided).
+ */
+
+/**
+ * Creates a type which is V when T is `never`, otherwise T.
+ */
+// See https://github.com/microsoft/TypeScript/issues/23182#issuecomment-379091887 for details on the array syntax.
+
 /**
  * The namespaced value for m.message
  */
@@ -207753,6 +208168,10 @@ const M_MESSAGE = new _matrixEventsSdk.UnstableValue("m.message", "org.matrix.ms
 
 /**
  * An m.message event rendering
+ */
+
+/**
+ * The content for an m.message event
  */
 exports.M_MESSAGE = M_MESSAGE;
 /**
@@ -207772,6 +208191,10 @@ const M_HTML = new _matrixEventsSdk.UnstableValue("m.html", "org.matrix.msc1767.
 /**
  * The content for an m.html event
  */
+
+/**
+ * The content for an m.message, m.text, or m.html event
+ */
 exports.M_HTML = M_HTML;
 /**
  * The namespaced value for an m.reference relation
@@ -207780,6 +208203,18 @@ const REFERENCE_RELATION = new _matrixEventsSdk.NamespacedValue("m.reference");
 
 /**
  * Represents any relation type
+ */
+
+/**
+ * An m.relates_to relationship
+ */
+
+/**
+ * Partial types for a Matrix Event.
+ */
+
+/**
+ * Represents a potentially namespaced event type.
  */
 exports.REFERENCE_RELATION = REFERENCE_RELATION;
 /**
@@ -208127,14 +208562,13 @@ class EncryptionSetupOperation {
  */
 exports.EncryptionSetupOperation = EncryptionSetupOperation;
 class AccountDataClientAdapter extends _typedEventEmitter.TypedEventEmitter {
-  //
-
   /**
    * @param existingValues - existing account data
    */
   constructor(existingValues) {
     super();
     this.existingValues = existingValues;
+    //
     (0, _defineProperty2.default)(this, "values", new Map());
   }
 
@@ -208913,10 +209347,6 @@ class HTTPError extends Error {
 }
 exports.HTTPError = HTTPError;
 class MatrixError extends HTTPError {
-  // The Matrix 'errcode' value, e.g. "M_FORBIDDEN".
-
-  // The raw Matrix error JSON used to construct this object.
-
   /**
    * Construct a Matrix error. This is a JavaScript Error with additional
    * information specific to the standard Matrix error response.
@@ -208935,7 +209365,9 @@ class MatrixError extends HTTPError {
     this.httpStatus = httpStatus;
     this.url = url;
     this.event = event;
+    // The Matrix 'errcode' value, e.g. "M_FORBIDDEN".
     (0, _defineProperty2.default)(this, "errcode", void 0);
+    // The raw Matrix error JSON used to construct this object.
     (0, _defineProperty2.default)(this, "data", void 0);
     this.errcode = errorJson.errcode;
     this.name = errorJson.errcode || "Unknown error code";
@@ -210383,6 +210815,10 @@ exports.LocationAssetType = LocationAssetType;
   LocationAssetType["Pin"] = "m.pin";
 })(LocationAssetType || (exports.LocationAssetType = LocationAssetType = {}));
 const M_ASSET = new _NamespacedValue.UnstableValue("m.asset", "org.matrix.msc3488.asset");
+
+/**
+ * The event definition for an m.asset event (in content)
+ */
 exports.M_ASSET = M_ASSET;
 const M_TIMESTAMP = new _NamespacedValue.UnstableValue("m.ts", "org.matrix.msc3488.ts");
 /**
@@ -210390,6 +210826,35 @@ const M_TIMESTAMP = new _NamespacedValue.UnstableValue("m.ts", "org.matrix.msc34
  */
 exports.M_TIMESTAMP = M_TIMESTAMP;
 const M_LOCATION = new _NamespacedValue.UnstableValue("m.location", "org.matrix.msc3488.location");
+
+/* From the spec at:
+ * https://github.com/matrix-org/matrix-doc/blob/matthew/location/proposals/3488-location.md
+{
+    "type": "m.room.message",
+    "content": {
+        "body": "Matthew was at geo:51.5008,0.1247;u=35 as of Sat Nov 13 18:50:58 2021",
+        "msgtype": "m.location",
+        "geo_uri": "geo:51.5008,0.1247;u=35",
+        "m.location": {
+            "uri": "geo:51.5008,0.1247;u=35",
+            "description": "Matthew's whereabouts",
+        },
+        "m.asset": {
+            "type": "m.self"
+        },
+        "m.text": "Matthew was at geo:51.5008,0.1247;u=35 as of Sat Nov 13 18:50:58 2021",
+        "m.ts": 1636829458432,
+    }
+}
+*/
+
+/**
+ * The content for an m.location event
+ */
+
+/**
+ * Possible content for location events as sent over the wire
+ */
 exports.M_LOCATION = M_LOCATION;
 //# sourceMappingURL=location.js.map
 
@@ -210566,9 +211031,8 @@ exports.CallEventHandlerEvent = CallEventHandlerEvent;
   CallEventHandlerEvent["Incoming"] = "Call.incoming";
 })(CallEventHandlerEvent || (exports.CallEventHandlerEvent = CallEventHandlerEvent = {}));
 class CallEventHandler {
-  // XXX: Most of these are only public because of the tests
-
   constructor(client) {
+    // XXX: Most of these are only public because of the tests
     (0, _defineProperty2.default)(this, "calls", void 0);
     (0, _defineProperty2.default)(this, "callEventBuffer", void 0);
     (0, _defineProperty2.default)(this, "nextSeqByCall", new Map());
@@ -210728,7 +211192,6 @@ class CallEventHandler {
       if (content.invitee && content.invitee !== this.client.getUserId()) {
         return; // This invite was meant for another user in the room
       }
-
       const timeUntilTurnCresExpire = ((_this$client$getTurnS = this.client.getTurnServersExpiry()) !== null && _this$client$getTurnS !== void 0 ? _this$client$getTurnS : 0) - Date.now();
       _logger.logger.info("Current turn creds expire in " + timeUntilTurnCresExpire + " ms");
       call = (_createNewMatrixCall = (0, _call.createNewMatrixCall)(this.client, callRoomId, {
@@ -216630,7 +217093,21 @@ var utils = _interopRequireWildcard(__webpack_require__("b83f"));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2017 - 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 /**
  * Internal module. in-memory storage for e2e.
  */
@@ -216646,6 +217123,7 @@ class MemoryCryptoStore {
     (0, _defineProperty2.default)(this, "notifiedErrorDevices", {});
     (0, _defineProperty2.default)(this, "inboundGroupSessions", {});
     (0, _defineProperty2.default)(this, "inboundGroupSessionsWithheld", {});
+    // Opaque device data object
     (0, _defineProperty2.default)(this, "deviceData", null);
     (0, _defineProperty2.default)(this, "rooms", {});
     (0, _defineProperty2.default)(this, "sessionsNeedingBackup", {});
@@ -217634,9 +218112,6 @@ class NoAuthFlowFoundError extends Error {
  * @param opts - options object
  */
 class InteractiveAuth {
-  // if we are currently trying to submit an auth dict (which includes polling)
-  // the promise the will resolve/reject when it completes
-
   constructor(opts) {
     (0, _defineProperty2.default)(this, "matrixClient", void 0);
     (0, _defineProperty2.default)(this, "inputs", void 0);
@@ -217652,7 +218127,12 @@ class InteractiveAuth {
     (0, _defineProperty2.default)(this, "chosenFlow", null);
     (0, _defineProperty2.default)(this, "currentStage", null);
     (0, _defineProperty2.default)(this, "emailAttempt", 1);
+    // if we are currently trying to submit an auth dict (which includes polling)
+    // the promise the will resolve/reject when it completes
     (0, _defineProperty2.default)(this, "submitPromise", null);
+    /**
+     * Requests a new email token and sets the email sid for the validation session
+     */
     (0, _defineProperty2.default)(this, "requestEmailToken", async () => {
       if (!this.requestingEmailToken) {
         _logger.logger.trace("Requesting email token. Attempt: " + this.emailAttempt);
@@ -217867,11 +218347,6 @@ class InteractiveAuth {
   setEmailSid(sid) {
     this.emailSid = sid;
   }
-
-  /**
-   * Requests a new email token and sets the email sid for the validation session
-   */
-
   /**
    * Fire off a request, and either resolve the promise, or call
    * startAuthStage.
@@ -218356,7 +218831,26 @@ var _httpApi = __webpack_require__("9c88");
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015, 2016 OpenMarket Ltd
+Copyright 2017 New Vector Ltd
+Copyright 2019, 2020 The Matrix.org Foundation C.I.C.
+Copyright 2021 - 2022 Šimon Brandner <simon.bra.ag@gmail.com>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/ /**
+ * This is an internal module. See {@link createNewMatrixCall} for the public API.
+ */
 var MediaType;
 (function (MediaType) {
   MediaType["AUDIO"] = "audio";
@@ -218472,6 +218966,9 @@ function getCodecParamMods(isPtt) {
   }];
   return mods;
 }
+
+// The key of the transceiver map (purpose + media type, separated by ':')
+
 // generates keys for the map of transceivers
 // kind is unfortunately a string rather than MediaType as this is the type of
 // track.kind
@@ -218479,31 +218976,6 @@ function getTransceiverKey(purpose, kind) {
   return purpose + ":" + kind;
 }
 class MatrixCall extends _typedEventEmitter.TypedEventEmitter {
-  // whether this call should have push-to-talk semantics
-  // This should be set by the consumer on incoming & outgoing calls.
-
-  // A queue for candidates waiting to go out.
-  // We try to amalgamate candidates into a single candidate message where
-  // possible
-
-  // our transceivers for each purpose and type of media
-
-  // The party ID of the other side: undefined if we haven't chosen a partner
-  // yet, null if we have but they didn't send a party ID.
-
-  // The logic of when & if a call is on hold is nontrivial and explained in is*OnHold
-  // This flag represents whether we want the other party to be on hold
-
-  // the stats for the call at the point it ended. We can't get these after we
-  // tear the call down, so we just grab a snapshot before we stop the call.
-  // The typescript definitions have this type as 'any' :(
-
-  // Perfect negotiation state: https://www.w3.org/TR/webrtc/#perfect-negotiation-example
-
-  // If candidates arrive before we've picked an opponent (which, in particular,
-  // will happen if the opponent sends candidates eagerly before the user answers
-  // the call) we buffer them up here so we can then add the ones from the party we pick
-
   /**
    * Construct a new Matrix Call.
    * @param opts - Config options.
@@ -218520,31 +218992,48 @@ class MatrixCall extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "ourPartyId", void 0);
     (0, _defineProperty2.default)(this, "peerConn", void 0);
     (0, _defineProperty2.default)(this, "toDeviceSeq", 0);
+    // whether this call should have push-to-talk semantics
+    // This should be set by the consumer on incoming & outgoing calls.
     (0, _defineProperty2.default)(this, "isPtt", false);
     (0, _defineProperty2.default)(this, "_state", CallState.Fledgling);
     (0, _defineProperty2.default)(this, "client", void 0);
     (0, _defineProperty2.default)(this, "forceTURN", void 0);
     (0, _defineProperty2.default)(this, "turnServers", void 0);
+    // A queue for candidates waiting to go out.
+    // We try to amalgamate candidates into a single candidate message where
+    // possible
     (0, _defineProperty2.default)(this, "candidateSendQueue", []);
     (0, _defineProperty2.default)(this, "candidateSendTries", 0);
     (0, _defineProperty2.default)(this, "candidatesEnded", false);
     (0, _defineProperty2.default)(this, "feeds", []);
+    // our transceivers for each purpose and type of media
     (0, _defineProperty2.default)(this, "transceivers", new Map());
     (0, _defineProperty2.default)(this, "inviteOrAnswerSent", false);
     (0, _defineProperty2.default)(this, "waitForLocalAVStream", false);
     (0, _defineProperty2.default)(this, "successor", void 0);
     (0, _defineProperty2.default)(this, "opponentMember", void 0);
     (0, _defineProperty2.default)(this, "opponentVersion", void 0);
+    // The party ID of the other side: undefined if we haven't chosen a partner
+    // yet, null if we have but they didn't send a party ID.
     (0, _defineProperty2.default)(this, "opponentPartyId", void 0);
     (0, _defineProperty2.default)(this, "opponentCaps", void 0);
     (0, _defineProperty2.default)(this, "iceDisconnectedTimeout", void 0);
     (0, _defineProperty2.default)(this, "inviteTimeout", void 0);
     (0, _defineProperty2.default)(this, "removeTrackListeners", new Map());
+    // The logic of when & if a call is on hold is nontrivial and explained in is*OnHold
+    // This flag represents whether we want the other party to be on hold
     (0, _defineProperty2.default)(this, "remoteOnHold", false);
+    // the stats for the call at the point it ended. We can't get these after we
+    // tear the call down, so we just grab a snapshot before we stop the call.
+    // The typescript definitions have this type as 'any' :(
     (0, _defineProperty2.default)(this, "callStatsAtEnd", void 0);
+    // Perfect negotiation state: https://www.w3.org/TR/webrtc/#perfect-negotiation-example
     (0, _defineProperty2.default)(this, "makingOffer", false);
     (0, _defineProperty2.default)(this, "ignoreOffer", false);
     (0, _defineProperty2.default)(this, "responsePromiseChain", void 0);
+    // If candidates arrive before we've picked an opponent (which, in particular,
+    // will happen if the opponent sends candidates eagerly before the user answers
+    // the call) we buffer them up here so we can then add the ones from the party we pick
     (0, _defineProperty2.default)(this, "remoteCandidateBuffer", new Map());
     (0, _defineProperty2.default)(this, "remoteAssertedIdentity", void 0);
     (0, _defineProperty2.default)(this, "remoteSDPStreamMetadata", void 0);
@@ -218554,6 +219043,9 @@ class MatrixCall extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "opponentDeviceInfo", void 0);
     (0, _defineProperty2.default)(this, "opponentSessionId", void 0);
     (0, _defineProperty2.default)(this, "groupCallId", void 0);
+    /**
+     * Internal
+     */
     (0, _defineProperty2.default)(this, "gotLocalIceCandidate", event => {
       if (event.candidate) {
         if (this.candidatesEnded) {
@@ -218598,7 +219090,6 @@ class MatrixCall extends _typedEventEmitter.TypedEventEmitter {
       if (this.callHasEnded()) {
         return; // because ICE can still complete as we're ending the call
       }
-
       _logger.logger.debug("Call ID " + this.callId + ": ICE connection state changed to: " + ((_this$peerConn2 = this.peerConn) === null || _this$peerConn2 === void 0 ? void 0 : _this$peerConn2.iceConnectionState));
 
       // ideally we'd consider the call to be connected when we get media but
@@ -219676,7 +220167,6 @@ class MatrixCall extends _typedEventEmitter.TypedEventEmitter {
     _logger.logger.debug(`Call ${this.callId} gotUserMediaForInvite`);
     // Now we wait for the negotiationneeded event
   }
-
   async sendAnswer() {
     const answerContent = {
       answer: {
@@ -219818,11 +220308,6 @@ class MatrixCall extends _typedEventEmitter.TypedEventEmitter {
       return;
     }
   }
-
-  /**
-   * Internal
-   */
-
   async onRemoteIceCandidatesReceived(ev) {
     if (this.callHasEnded()) {
       //debuglog("Ignoring remote ICE candidate because call has ended");
@@ -220643,6 +221128,42 @@ module.exports.__inject__ = function (shadowRoot) {
 
 /***/ }),
 
+/***/ "d68a":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.UpdateDelayedEventAction = void 0;
+/*
+ * Copyright 2020 - 2024 The Matrix.org Foundation C.I.C.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var UpdateDelayedEventAction = /*#__PURE__*/function (UpdateDelayedEventAction) {
+  UpdateDelayedEventAction["Cancel"] = "cancel";
+  UpdateDelayedEventAction["Restart"] = "restart";
+  UpdateDelayedEventAction["Send"] = "send";
+  return UpdateDelayedEventAction;
+}({});
+exports.UpdateDelayedEventAction = UpdateDelayedEventAction;
+//# sourceMappingURL=UpdateDelayedEventAction.js.map
+
+/***/ }),
+
 /***/ "d6d6":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -220858,16 +221379,14 @@ exports.GroupCallEventHandlerEvent = GroupCallEventHandlerEvent;
   GroupCallEventHandlerEvent["Participants"] = "GroupCall.participants";
 })(GroupCallEventHandlerEvent || (exports.GroupCallEventHandlerEvent = GroupCallEventHandlerEvent = {}));
 class GroupCallEventHandler {
-  // roomId -> GroupCall
-
-  // All rooms we know about and whether we've seen a 'Room' event
-  // for them. The promise will be fulfilled once we've processed that
-  // event which means we're "up to date" on what calls are in a room
-  // and get
-
   constructor(client) {
     this.client = client;
     (0, _defineProperty2.default)(this, "groupCalls", new Map());
+    // roomId -> GroupCall
+    // All rooms we know about and whether we've seen a 'Room' event
+    // for them. The promise will be fulfilled once we've processed that
+    // event which means we're "up to date" on what calls are in a room
+    // and get
     (0, _defineProperty2.default)(this, "roomDeferreds", new Map());
     (0, _defineProperty2.default)(this, "onRoomsChanged", room => {
       this.createGroupCallForRoom(room);
@@ -221184,7 +221703,21 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__("9523"));
 var _event = __webpack_require__("60af");
 var _eventTimeline = __webpack_require__("2f36");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 /**
  * Represents a [MSC3089](https://github.com/matrix-org/matrix-doc/pull/3089) branch - a reference
  * to a file (leaf) in the tree. Note that this is UNSTABLE and subject to breaking changes
@@ -221559,7 +222092,21 @@ var _logger = __webpack_require__("5b5f");
 var _PushRules = __webpack_require__("93dd");
 var _event = __webpack_require__("60af");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2015 - 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
 const RULEKINDS_IN_ORDER = [_PushRules.PushRuleKind.Override, _PushRules.PushRuleKind.ContentSpecific, _PushRules.PushRuleKind.RoomSpecific, _PushRules.PushRuleKind.SenderSpecific, _PushRules.PushRuleKind.Underride];
 
 // The default override rules to apply to the push rules that arrive from the server.
@@ -221887,7 +222434,6 @@ class PushProcessor {
     }
     PushProcessor.cachedGlobToRegex[glob] = new RegExp(prefix + (0, _utils.globToRegexp)(glob) + suffix, "i") // Case insensitive
     ;
-
     return PushProcessor.cachedGlobToRegex[glob];
   }
   valueForDottedKey(key, ev) {
@@ -223478,6 +224024,17 @@ Object.keys(_GetMediaConfigAction).forEach(function (key) {
     }
   });
 });
+var _UpdateDelayedEventAction = __webpack_require__("d68a");
+Object.keys(_UpdateDelayedEventAction).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _UpdateDelayedEventAction[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _UpdateDelayedEventAction[key];
+    }
+  });
+});
 var _UploadFileAction = __webpack_require__("8c79");
 Object.keys(_UploadFileAction).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -223873,6 +224430,24 @@ exports.push([module.i, ".message[data-v-1766477c]{font-weight:400;text-align:ce
 // Exports
 module.exports = exports;
 
+
+/***/ }),
+
+/***/ "df70":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("83dd");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to Shadow Root
+var add = __webpack_require__("35d6").default
+module.exports.__inject__ = function (shadowRoot) {
+  add("2316fe10", content, shadowRoot)
+};
 
 /***/ }),
 
@@ -225349,10 +225924,18 @@ class DeviceInfo {
    */
   constructor(deviceId) {
     this.deviceId = deviceId;
+    /** list of algorithms supported by this device */
     (0, _defineProperty2.default)(this, "algorithms", []);
+    /** a map from `<key type>:<id> -> <base64-encoded key>` */
     (0, _defineProperty2.default)(this, "keys", {});
+    /** whether the device has been verified/blocked by the user */
     (0, _defineProperty2.default)(this, "verified", DeviceVerification.Unverified);
+    /**
+     * whether the user knows of this device's existence
+     * (useful when warning the user that a user has added new devices)
+     */
     (0, _defineProperty2.default)(this, "known", false);
+    /** additional data from the homeserver */
     (0, _defineProperty2.default)(this, "unsigned", {});
     (0, _defineProperty2.default)(this, "signatures", {});
   }
@@ -225803,6 +226386,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
@@ -225821,7 +226406,7 @@ function _wrapAsyncGenerator(fn) { return function () { return new _AsyncGenerat
 function _AsyncGenerator(gen) { var front, back; function resume(key, arg) { try { var result = gen[key](arg), value = result.value, overloaded = value instanceof _OverloadYield; Promise.resolve(overloaded ? value.v : value).then(function (arg) { if (overloaded) { var nextKey = "return" === key ? "return" : "next"; if (!value.k || arg.done) return resume(nextKey, arg); arg = gen[nextKey](arg).value; } settle(result.done ? "return" : "normal", arg); }, function (err) { resume("throw", err); }); } catch (err) { settle("throw", err); } } function settle(type, value) { switch (type) { case "return": front.resolve({ value: value, done: !0 }); break; case "throw": front.reject(value); break; default: front.resolve({ value: value, done: !1 }); } (front = front.next) ? resume(front.key, front.arg) : back = null; } this._invoke = function (key, arg) { return new Promise(function (resolve, reject) { var request = { key: key, arg: arg, resolve: resolve, reject: reject, next: null }; back ? back = back.next = request : (front = back = request, resume(key, arg)); }); }, "function" != typeof gen["return"] && (this["return"] = void 0); }
 _AsyncGenerator.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () { return this; }, _AsyncGenerator.prototype.next = function (arg) { return this._invoke("next", arg); }, _AsyncGenerator.prototype["throw"] = function (arg) { return this._invoke("throw", arg); }, _AsyncGenerator.prototype["return"] = function (arg) { return this._invoke("return", arg); };
 function _OverloadYield(value, kind) { this.v = value, this.k = kind; } /*
-                                                                         * Copyright 2020 - 2021 The Matrix.org Foundation C.I.C.
+                                                                         * Copyright 2020 - 2024 The Matrix.org Foundation C.I.C.
                                                                          *
                                                                          * Licensed under the Apache License, Version 2.0 (the "License");
                                                                          * you may not use this file except in compliance with the License.
@@ -226191,21 +226776,40 @@ var WidgetApi = /*#__PURE__*/function (_EventEmitter) {
     }
   }, {
     key: "sendRoomEvent",
-    value: function sendRoomEvent(eventType, content, roomId) {
-      return this.transport.send(_WidgetApiAction.WidgetApiFromWidgetAction.SendEvent, {
-        type: eventType,
-        content: content,
-        room_id: roomId
-      });
+    value: function sendRoomEvent(eventType, content, roomId, delay, parentDelayId) {
+      return this.sendEvent(eventType, undefined, content, roomId, delay, parentDelayId);
     }
   }, {
     key: "sendStateEvent",
-    value: function sendStateEvent(eventType, stateKey, content, roomId) {
-      return this.transport.send(_WidgetApiAction.WidgetApiFromWidgetAction.SendEvent, {
+    value: function sendStateEvent(eventType, stateKey, content, roomId, delay, parentDelayId) {
+      return this.sendEvent(eventType, stateKey, content, roomId, delay, parentDelayId);
+    }
+  }, {
+    key: "sendEvent",
+    value: function sendEvent(eventType, stateKey, content, roomId, delay, parentDelayId) {
+      return this.transport.send(_WidgetApiAction.WidgetApiFromWidgetAction.SendEvent, _objectSpread(_objectSpread(_objectSpread(_objectSpread({
         type: eventType,
-        content: content,
-        state_key: stateKey,
+        content: content
+      }, stateKey !== undefined && {
+        state_key: stateKey
+      }), roomId !== undefined && {
         room_id: roomId
+      }), delay !== undefined && {
+        delay: delay
+      }), parentDelayId !== undefined && {
+        parent_delay_id: parentDelayId
+      }));
+    }
+
+    /**
+     * @deprecated This currently relies on an unstable MSC (MSC4157).
+     */
+  }, {
+    key: "updateDelayedEvent",
+    value: function updateDelayedEvent(delayId, action) {
+      return this.transport.send(_WidgetApiAction.WidgetApiFromWidgetAction.MSC4157UpdateDelayedEvent, {
+        delay_id: delayId,
+        action: action
       });
     }
 
@@ -229563,7 +230167,6 @@ class VerificationBase extends _typedEventEmitter.TypedEventEmitter {
       }
     }, 10 * 60 * 1000); // 10 minutes
   }
-
   endTimer() {
     if (this.transactionTimeoutTimer !== null) {
       clearTimeout(this.transactionTimeoutTimer);
@@ -230114,26 +230717,12 @@ module.exports = {
 
 /***/ }),
 
-/***/ "ebed":
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".deletedMessage[data-v-4c6b427c]{font-size:.8em;text-align:center;opacity:.6;padding:1em}.event[data-v-4c6b427c]{opacity:0;transition:.3s}.event.readyToRender[data-v-4c6b427c]{opacity:1}.event .loading[data-v-4c6b427c]{width:100%;height:100%;text-align:center}.event .deletedMessage[data-v-4c6b427c],.event .loading[data-v-4c6b427c]{position:relative;left:0;top:0;padding:.5em}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "ecec":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aed8f50-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/userspic/many.vue?vue&type=template&id=4dda7508&scoped=true
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"9c9271d2-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/assets/userspic/many.vue?vue&type=template&id=4dda7508&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -230308,6 +230897,27 @@ limitations under the License.
  * the public classes.
  */
 
+/* eslint-disable camelcase */
+
+/**
+ * When an event is a visibility change event, as per MSC3531,
+ * the visibility change implied by the event.
+ */
+
+/* eslint-enable camelcase */
+
+/**
+ * Message hiding, as specified by https://github.com/matrix-org/matrix-doc/pull/3531.
+ */
+
+/**
+ * Variant of `MessageVisibility` for the case in which the message should be displayed.
+ */
+
+/**
+ * Variant of `MessageVisibility` for the case in which the message should be hidden.
+ */
+
 // A singleton implementing `IMessageVisibilityVisible`.
 const MESSAGE_VISIBLE = Object.freeze({
   visible: true
@@ -230324,97 +230934,6 @@ exports.MatrixEventEvent = MatrixEventEvent;
   MatrixEventEvent["RelationsCreated"] = "Event.relationsCreated";
 })(MatrixEventEvent || (exports.MatrixEventEvent = MatrixEventEvent = {}));
 class MatrixEvent extends _typedEventEmitter.TypedEventEmitter {
-  /* Message hiding, as specified by https://github.com/matrix-org/matrix-doc/pull/3531.
-    Note: We're returning this object, so any value stored here MUST be frozen.
-  */
-
-  // Not all events will be extensible-event compatible, so cache a flag in
-  // addition to a falsy cached event value. We check the flag later on in
-  // a public getter to decide if the cache is valid.
-
-  /* curve25519 key which we believe belongs to the sender of the event. See
-   * getSenderKey()
-   */
-
-  /* ed25519 key which the sender of this event (for olm) or the creator of
-   * the megolm session (for megolm) claims to own. See getClaimedEd25519Key()
-   */
-
-  /* curve25519 keys of devices involved in telling us about the
-   * senderCurve25519Key and claimedEd25519Key.
-   * See getForwardingCurve25519KeyChain().
-   */
-
-  /* where the decryption key is untrusted
-   */
-
-  /* if we have a process decrypting this event, a Promise which resolves
-   * when it is finished. Normally null.
-   */
-
-  /* flag to indicate if we should retry decrypting this event after the
-   * first attempt (eg, we have received new data which means that a second
-   * attempt may succeed)
-   */
-
-  /* The txnId with which this event was sent if it was during this session,
-   * allows for a unique ID which does not change when the event comes back down sync.
-   */
-
-  /**
-   * @experimental
-   * A reference to the thread this event belongs to
-   */
-
-  /* Set an approximate timestamp for the event relative the local clock.
-   * This will inherently be approximate because it doesn't take into account
-   * the time between the server putting the 'age' field on the event as it sent
-   * it to us and the time we're now constructing this event, but that's better
-   * than assuming the local clock is in sync with the origin HS's clock.
-   */
-
-  /**
-   * The room member who sent this event, or null e.g.
-   * this is a presence event. This is only guaranteed to be set for events that
-   * appear in a timeline, ie. do not guarantee that it will be set on state
-   * events.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * The room member who is the target of this event, e.g.
-   * the invitee, the person being banned, etc.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * The sending status of the event.
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * most recent error associated with sending the event, if any
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /**
-   * True if this event is 'forward looking', meaning
-   * that getDirectionalContent() will return event.content and not event.prev_content.
-   * Only state events may be backwards looking
-   * Default: true. <strong>This property is experimental and may change.</strong>
-   * @privateRemarks
-   * Should be read-only
-   */
-
-  /* If the event is a `m.key.verification.request` (or to_device `m.key.verification.start`) event,
-   * `Crypto` will set this the `VerificationRequest` for the event
-   * so it can be easily accessed from the timeline.
-   */
-
   /**
    * Construct a Matrix Event object
    *
@@ -230439,24 +230958,98 @@ class MatrixEvent extends _typedEventEmitter.TypedEventEmitter {
     (0, _defineProperty2.default)(this, "_localRedactionEvent", null);
     (0, _defineProperty2.default)(this, "_isCancelled", false);
     (0, _defineProperty2.default)(this, "clearEvent", void 0);
+    /* Message hiding, as specified by https://github.com/matrix-org/matrix-doc/pull/3531.
+      Note: We're returning this object, so any value stored here MUST be frozen.
+    */
     (0, _defineProperty2.default)(this, "visibility", MESSAGE_VISIBLE);
+    // Not all events will be extensible-event compatible, so cache a flag in
+    // addition to a falsy cached event value. We check the flag later on in
+    // a public getter to decide if the cache is valid.
     (0, _defineProperty2.default)(this, "_hasCachedExtEv", false);
     (0, _defineProperty2.default)(this, "_cachedExtEv", undefined);
+    /* curve25519 key which we believe belongs to the sender of the event. See
+     * getSenderKey()
+     */
     (0, _defineProperty2.default)(this, "senderCurve25519Key", null);
+    /* ed25519 key which the sender of this event (for olm) or the creator of
+     * the megolm session (for megolm) claims to own. See getClaimedEd25519Key()
+     */
     (0, _defineProperty2.default)(this, "claimedEd25519Key", null);
+    /* curve25519 keys of devices involved in telling us about the
+     * senderCurve25519Key and claimedEd25519Key.
+     * See getForwardingCurve25519KeyChain().
+     */
     (0, _defineProperty2.default)(this, "forwardingCurve25519KeyChain", []);
+    /* where the decryption key is untrusted
+     */
     (0, _defineProperty2.default)(this, "untrusted", null);
+    /* if we have a process decrypting this event, a Promise which resolves
+     * when it is finished. Normally null.
+     */
     (0, _defineProperty2.default)(this, "decryptionPromise", null);
+    /* flag to indicate if we should retry decrypting this event after the
+     * first attempt (eg, we have received new data which means that a second
+     * attempt may succeed)
+     */
     (0, _defineProperty2.default)(this, "retryDecryption", false);
+    /* The txnId with which this event was sent if it was during this session,
+     * allows for a unique ID which does not change when the event comes back down sync.
+     */
     (0, _defineProperty2.default)(this, "txnId", void 0);
+    /**
+     * @experimental
+     * A reference to the thread this event belongs to
+     */
     (0, _defineProperty2.default)(this, "thread", void 0);
     (0, _defineProperty2.default)(this, "threadId", void 0);
+    /* Set an approximate timestamp for the event relative the local clock.
+     * This will inherently be approximate because it doesn't take into account
+     * the time between the server putting the 'age' field on the event as it sent
+     * it to us and the time we're now constructing this event, but that's better
+     * than assuming the local clock is in sync with the origin HS's clock.
+     */
     (0, _defineProperty2.default)(this, "localTimestamp", void 0);
+    /**
+     * The room member who sent this event, or null e.g.
+     * this is a presence event. This is only guaranteed to be set for events that
+     * appear in a timeline, ie. do not guarantee that it will be set on state
+     * events.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "sender", null);
+    /**
+     * The room member who is the target of this event, e.g.
+     * the invitee, the person being banned, etc.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "target", null);
+    /**
+     * The sending status of the event.
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "status", null);
+    /**
+     * most recent error associated with sending the event, if any
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "error", null);
+    /**
+     * True if this event is 'forward looking', meaning
+     * that getDirectionalContent() will return event.content and not event.prev_content.
+     * Only state events may be backwards looking
+     * Default: true. <strong>This property is experimental and may change.</strong>
+     * @privateRemarks
+     * Should be read-only
+     */
     (0, _defineProperty2.default)(this, "forwardLooking", true);
+    /* If the event is a `m.key.verification.request` (or to_device `m.key.verification.start`) event,
+     * `Crypto` will set this the `VerificationRequest` for the event
+     * so it can be easily accessed from the timeline.
+     */
     (0, _defineProperty2.default)(this, "verificationRequest", void 0);
     (0, _defineProperty2.default)(this, "reEmitter", void 0);
     ["state_key", "type", "sender", "room_id", "membership"].forEach(prop => {
@@ -233316,7 +233909,24 @@ var _event = __webpack_require__("60af");
 var _read_receipts = __webpack_require__("283b");
 var _sync = __webpack_require__("886e");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /*
+Copyright 2017 - 2021 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/ /**
+ * This is an internal module. See {@link SyncAccumulator} for the public class.
+ */
+/* eslint-disable camelcase */
 /* eslint-enable camelcase */
 let Category;
 exports.Category = Category;
@@ -233340,19 +233950,17 @@ function isTaggedEvent(event) {
  * rather than asking the server to do an initial sync on startup.
  */
 class SyncAccumulator {
-  // $event_type: Object
-  // $roomId: { ... sync 'invite' json data ... }
-
-  // the /sync token which corresponds to the last time rooms were
-  // accumulated. We remember this so that any caller can obtain a
-  // coherent /sync response and know at what point they should be
-  // streaming from without losing events.
-
   constructor(opts = {}) {
     this.opts = opts;
     (0, _defineProperty2.default)(this, "accountData", {});
+    // $event_type: Object
     (0, _defineProperty2.default)(this, "inviteRooms", {});
+    // $roomId: { ... sync 'invite' json data ... }
     (0, _defineProperty2.default)(this, "joinRooms", {});
+    // the /sync token which corresponds to the last time rooms were
+    // accumulated. We remember this so that any caller can obtain a
+    // coherent /sync response and know at what point they should be
+    // streaming from without losing events.
     (0, _defineProperty2.default)(this, "nextBatch", null);
     this.opts.maxTimelineEntries = this.opts.maxTimelineEntries || 50;
   }
@@ -233742,7 +234350,6 @@ class SyncAccumulator {
           if (!msgData.token) {
             return; // this shouldn't happen as we prune constantly.
           }
-
           roomJson.timeline.prev_batch = msgData.token;
         }
         let transformedEvent;
@@ -234241,6 +234848,18 @@ var keys = shared('keys');
 module.exports = function (key) {
   return keys[key] || (keys[key] = uid(key));
 };
+
+
+/***/ }),
+
+/***/ "f89f":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_663af0f2_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("df70");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_663af0f2_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_663af0f2_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_663af0f2_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_663af0f2_prod_scoped_true_lang_sass__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),

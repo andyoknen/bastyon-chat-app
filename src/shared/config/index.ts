@@ -3,3 +3,4 @@ export const DEFAULT_PRIVATEKEY = import.meta.env
   .VITE_DEFAULT_PRIVATEKEY as string;
 export const DEFAULT_ADDRESS = import.meta.env.VITE_DEFAULT_ADDRESS as string;
 export const APP_NAME = "bastyon-chat-app";
+export const IS_DEV = process.env.NODE_ENV === "development";
