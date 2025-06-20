@@ -42,10 +42,7 @@ jobs:
           name: dist.tgz
       - name: Unpack artifact
         run: |
-          rm -rf /data/base/*
-          tar xzf dist.tgz -C /data/base/ --no-same-owner
+          rm -rf /data/base.best/*
+          tar xzf dist.tgz -C /data/base.best/ --no-same-owner
       - name: Delete artifacts
         run: rm -rf dist.tgz
-      - name: Reset nginx cache
-        run: /data/reset_cache.sh
-        shell: bash
